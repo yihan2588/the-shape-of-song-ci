@@ -1,5 +1,7 @@
 # The shape of Song Ci / 词之形
 
+![App preview](docs/figures/app-preview.png)
+
 A bilingual map of 240 Song Ci poems. Explore fixed t-SNE and UMAP views,
 search by poet or poem text, and read a poem alongside its three closest
 companions in the original embedding space.
