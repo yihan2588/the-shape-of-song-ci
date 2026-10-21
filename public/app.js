@@ -1,12 +1,15 @@
 (() => {
   'use strict';
   const DATA = window.POETRY_DATA, docs = DATA.documents, $ = id => document.getElementById(id);
+  const IMAGERY = window.SONG_CI_IMAGERY;
   const palette = { background: '#b0bcb3', match: '#41aa8b', selected: '#348675', neighbors: ['#064b40', '#166455', '#287e6c'] };
   const styleColors = { '豪放派': '#b76c4e', '婉约派': '#438e9b' };
   const messages = {
     en: {
       title:'The shape of Song Ci',subtitle:'Explore a poem and its closest companions.',about:'Dataset & method',language:'Language',
       sourceDoc:'240 Song-era entries from Guwendao’s Song Ci anthology, crawled 20 Oct 2026. Tang/Five Dynasties chapters are excluded. When authorship is disputed, the first listed author is used throughout the app.',sourceAnthology:'Source anthology ↗',
+      imageryDoc:'The edge words describe imagery found more often in the 60 poems at each end of the map’s main direction.',
+      imageryCounts:'Poems at this end / opposite end (60 each)',
       modelDoc:'Complete verse is embedded locally with Qwen3-Embedding-4B and L2-normalized. Titles, poets, prefaces and labels never enter the vectors. Poems remain in their original Chinese.',
       labelDoc:'Conventional style labels: Haofang — 苏轼、辛弃疾; Wanyue — 柳永、晏殊、欧阳修、秦观、周邦彦、李清照. Other poets are unlabeled. These are author associations, not labels for every poem.',
       viewDoc:'t-SNE and UMAP show semantic neighborhoods. All points stay fixed when filtering. Neighbors use exact cosine in the original vectors stored in Supabase, across the full dataset.',provenance:'Full settings & sources ↗',
@@ -16,6 +19,8 @@
     zh: {
       title:'词之形',subtitle:'读一首词，发现与它意境相近的作品。',about:'数据与方法',language:'界面语言',
       sourceDoc:'选自古文岛《宋词三百首》的宋代篇目，共240篇，采集于2026年10月20日。不含唐五代卷；有多位候选作者时，统一采用原站列出的第一位。',sourceAnthology:'查看选集原文 ↗',
+      imageryDoc:'两端词语概括地图主方向两端各60篇词中较突出的意象。',
+      imageryCounts:'含该意象的词作：本端 / 另一端（各60篇）',
       modelDoc:'使用本地 Qwen3-Embedding-4B 模型编码完整词作正文，并进行 L2 归一化。标题、作者、小序和流派标签均不参与编码。词作保留中文原文。',
       labelDoc:'仅为公认的代表词人标注流派：豪放派——苏轼、辛弃疾；婉约派——柳永、晏殊、欧阳修、秦观、周邦彦、李清照。其余暂不标注。词人的流派归属不代表其每首作品的风格。',
       viewDoc:'t-SNE 和 UMAP 用于展示语义邻近关系。筛选只改变高亮，不移动散点。相近词作由 Supabase 按原始向量的余弦相似度，从全部作品中选取。',provenance:'查看完整参数与来源 ↗',
@@ -109,7 +114,17 @@
       el.addEventListener('click',()=>selectPiece(n.index));fragment.append(el);
     });$('neighbors').replaceChildren(fragment);
   }
+  function renderImagery(){
+    const imagery=IMAGERY[view];$('plot-stage').setAttribute('data-view',view);
+    for(const [end,id] of ['imagery-horizons','imagery-longing'].entries()){
+      const region=imagery.ends[end];
+      const gloss=lang==='en'?(end===0?'Ten thousand miles · Ages past · White hair':'Dusk · Longing · Fallen blossoms'):region.words.join(' · ');
+      const evidence=`${gloss}\n${t('imageryCounts')}\n${region.counts.map(c=>`${c.bigram}  ${c.poems} / ${c.opposite_poems}`).join('\n')}`;
+      $(id).setAttribute('title',evidence);$(id).setAttribute('aria-label',evidence);
+    }
+  }
   function renderPlot(){
+    renderImagery();
     const rank=new Map(neighbors().map((n,k)=>[n.index,k])),coords=DATA.coordinates[view],styles=$('color').value==='style';
     const colors=docs.map((d,i)=>i===selected?palette.selected:rank.has(i)?palette.neighbors[rank.get(i)]
       :filtering?(matches.has(i)?palette.match:palette.background):styles?(styleColors[d.label]||palette.background):palette.background);
@@ -117,8 +132,8 @@
       text:docs.map((_,i)=>i===selected?t('selected'):rank.has(i)?String(rank.get(i)+1):''),textposition:'top center',textfont:{color:'#164c40',size:11},
       hovertext:docs.map(d=>`${esc(pieceName(d))} · ${esc(d.poet)}<br>${esc(opening(d))}<br>${esc(labelName(d.label))}`),hovertemplate:'%{hovertext}<extra></extra>',
       marker:{color:colors,size:docs.map((_,i)=>i===selected?14:rank.has(i)?12:filtering&&matches.has(i)?8:5),opacity:1,symbol:docs.map((_,i)=>i===selected?'diamond':'circle'),line:{width:0}}};
-    const axis=dimension=>({range:bounds[view][dimension],autorange:false,gridcolor:'#e1e3d9',zeroline:false,tickfont:{size:10},title:{text:`${view==='tsne'?'t-SNE':'UMAP'} ${dimension+1}`,font:{size:10}}});
-    Plotly.react('plot',[trace],{paper_bgcolor:'#faf8f2',plot_bgcolor:'#faf8f2',font:{family:'system-ui',color:'#26332f'},margin:{l:35,r:10,t:22,b:35},showlegend:false,uirevision:view,dragmode:'pan',xaxis:axis(0),yaxis:axis(1)},
+    const axis=dimension=>({range:bounds[view][dimension],autorange:false,gridcolor:'#e1e3d9',zeroline:false,showticklabels:false,ticks:'',title:{text:''}});
+    Plotly.react('plot',[trace],{paper_bgcolor:'#faf8f2',plot_bgcolor:'#faf8f2',font:{family:'system-ui',color:'#26332f'},margin:{l:14,r:14,t:37,b:34},showlegend:false,uirevision:view,dragmode:'pan',xaxis:axis(0),yaxis:axis(1)},
       {responsive:true,displayModeBar:false,scrollZoom:true});
     $('plot-status').textContent=selected===null?t('status')(matching.length,docs.length):t('selectedStatus');
   }

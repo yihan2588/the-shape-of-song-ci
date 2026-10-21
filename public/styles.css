@@ -25,3 +25,15 @@
   .filter-footer{display:flex;flex-direction:column;gap:8px;flex-shrink:0;border-top:1px solid var(--line);padding-top:12px;background:var(--paper)}
   #show-map{min-height:48px;width:100%;background:var(--selected);color:white;border-color:var(--selected);font-size:15px;font-weight:600}
 }
+
+/* Poetic landmarks sit in reserved margins, clear of the plotted points. */
+.plot-stage{position:relative;flex:1;min-height:0;margin-top:8px}
+.plot-stage #plot{height:100%;margin:0}
+.imagery-end{position:absolute;z-index:1;max-width:calc(100% - 28px);white-space:nowrap;line-height:1.4;cursor:help}
+.imagery-words{font:17px/1.4 'Songti SC','Noto Serif CJK SC','STSong',serif;letter-spacing:.08em}
+.imagery-separator{font-size:11px;opacity:.5;margin:0 .8em;vertical-align:middle}
+.imagery-horizons{left:14px;color:#65715b}
+.imagery-longing{right:14px;color:#896d78}
+[data-view="tsne"] .imagery-horizons,[data-view="umap"] .imagery-longing{bottom:0}
+[data-view="tsne"] .imagery-longing,[data-view="umap"] .imagery-horizons{top:0}
+@media(max-width:640px){.imagery-words{font-size:15px}.imagery-separator{margin:0 .65em}}

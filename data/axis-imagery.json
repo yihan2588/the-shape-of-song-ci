@@ -1,0 +1,636 @@
+{
+  "method": "First principal direction of each saved 2D projection, oriented toward increasing x. The outer 25% at either end (60 poems each) supply document-frequency contrasts. 20% and 30% tails and occurrences per 1000 Han characters check sensitivity. Only complete poem text is counted; no poet or style labels are used.",
+  "selection": "The same two imagery triplets were chosen by the user for both views after review of distinctive bigrams. They are literary landmarks along a continuous projection gradient, not a fitted classification or a claim about preserved original-space distances.",
+  "poems": 240,
+  "content_sha256": "c5ce0588862f040296e5f5c0031dd4d5bbf6b035d90823aa0e73cbcf8f415fe6",
+  "views": {
+    "tsne": {
+      "direction": [
+        0.8120663491295971,
+        0.5835651159993437
+      ],
+      "displayed_variance_fraction": 0.698651399059892,
+      "horizons_at_top": false,
+      "regions": [
+        {
+          "words": [
+            "万里",
+            "千古",
+            "白发"
+          ],
+          "evidence": [
+            {
+              "fraction": 0.2,
+              "poems_per_end": 48,
+              "counts": [
+                {
+                  "bigram": "万里",
+                  "poems": 11,
+                  "opposite_poems": 1,
+                  "per_1000_han": 2.906208718626156,
+                  "opposite_per_1000_han": 0.388651379712398
+                },
+                {
+                  "bigram": "千古",
+                  "poems": 8,
+                  "opposite_poems": 0,
+                  "per_1000_han": 2.1136063408190227,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "白发",
+                  "poems": 4,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.0568031704095113,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "poems_per_end": 60,
+              "counts": [
+                {
+                  "bigram": "万里",
+                  "poems": 12,
+                  "opposite_poems": 1,
+                  "per_1000_han": 2.6223776223776225,
+                  "opposite_per_1000_han": 0.3075030750307503
+                },
+                {
+                  "bigram": "千古",
+                  "poems": 8,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.7482517482517483,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "白发",
+                  "poems": 6,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.3111888111888113,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            },
+            {
+              "fraction": 0.3,
+              "poems_per_end": 72,
+              "counts": [
+                {
+                  "bigram": "万里",
+                  "poems": 14,
+                  "opposite_poems": 2,
+                  "per_1000_han": 2.8137310073157007,
+                  "opposite_per_1000_han": 0.4867364322219518
+                },
+                {
+                  "bigram": "千古",
+                  "poems": 8,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.5006565372350402,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "白发",
+                  "poems": 6,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.1254924029262803,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            }
+          ],
+          "poem_ids": [
+            "guwendao-2ae0021a2446",
+            "guwendao-1c78ac08096e",
+            "guwendao-69340a781288",
+            "guwendao-a73bf3bf9923",
+            "guwendao-958fe8b793c3",
+            "guwendao-3cfc9856b57a",
+            "guwendao-85b8792a66ac",
+            "guwendao-9822debcdc64",
+            "guwendao-19f9f352c186",
+            "guwendao-78fb60bae93d",
+            "guwendao-12e69f000057",
+            "guwendao-264d7fe426e8",
+            "guwendao-a3d4996007f0",
+            "guwendao-4d9974195b64",
+            "guwendao-5fb51378286c",
+            "guwendao-9134991f2c16",
+            "guwendao-ab0499c30bc1",
+            "guwendao-b05f700e9f41",
+            "guwendao-958ebfc84111",
+            "guwendao-17a86f6c536a",
+            "guwendao-06df643b48ef",
+            "guwendao-1bb90f5ec9dd",
+            "guwendao-2964b569c32c",
+            "guwendao-a8062138a414",
+            "guwendao-d9f25ef77ac5",
+            "guwendao-6d1ade3a93ca",
+            "guwendao-61e417151fc8",
+            "guwendao-098e88b62d38",
+            "guwendao-9d979213a02a",
+            "guwendao-f7dfac995fee",
+            "guwendao-632c5beb84eb",
+            "guwendao-f6334100d760",
+            "guwendao-9d2a73f5e3bd",
+            "guwendao-ac19428da949",
+            "guwendao-2b8efffb92df",
+            "guwendao-567fcf6ffefb",
+            "guwendao-f547ff97e13f",
+            "guwendao-0927b657115d",
+            "guwendao-4d2028af6aed",
+            "guwendao-4a32dd627eee",
+            "guwendao-8ec8a1fc7509",
+            "guwendao-7d79ae325a4a",
+            "guwendao-b5b2ba43d533",
+            "guwendao-f8bcca83002b",
+            "guwendao-070fdb82a3f9",
+            "guwendao-8d26eae2cfdf",
+            "guwendao-6e55d24e931e",
+            "guwendao-ddc4b7e8623a",
+            "guwendao-d7fefbfe77d1",
+            "guwendao-29de61cb2ecf",
+            "guwendao-76a124fc2fb8",
+            "guwendao-334152b6ba49",
+            "guwendao-0bfac067dd8e",
+            "guwendao-6b30455fdd3c",
+            "guwendao-feeab3a2e80e",
+            "guwendao-e94721389239",
+            "guwendao-79730f08af17",
+            "guwendao-a9a16104dd1b",
+            "guwendao-4b7defe71710",
+            "guwendao-e909d866deb8"
+          ]
+        },
+        {
+          "words": [
+            "黄昏",
+            "相思",
+            "落花"
+          ],
+          "evidence": [
+            {
+              "fraction": 0.2,
+              "poems_per_end": 48,
+              "counts": [
+                {
+                  "bigram": "黄昏",
+                  "poems": 8,
+                  "opposite_poems": 1,
+                  "per_1000_han": 3.109211037699184,
+                  "opposite_per_1000_han": 0.26420079260237783
+                },
+                {
+                  "bigram": "相思",
+                  "poems": 6,
+                  "opposite_poems": 0,
+                  "per_1000_han": 2.331908278274388,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "落花",
+                  "poems": 5,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.9432568985619898,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "poems_per_end": 60,
+              "counts": [
+                {
+                  "bigram": "黄昏",
+                  "poems": 9,
+                  "opposite_poems": 1,
+                  "per_1000_han": 2.7675276752767526,
+                  "opposite_per_1000_han": 0.21853146853146854
+                },
+                {
+                  "bigram": "相思",
+                  "poems": 6,
+                  "opposite_poems": 1,
+                  "per_1000_han": 1.845018450184502,
+                  "opposite_per_1000_han": 0.21853146853146854
+                },
+                {
+                  "bigram": "落花",
+                  "poems": 5,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.5375153751537516,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            },
+            {
+              "fraction": 0.3,
+              "poems_per_end": 72,
+              "counts": [
+                {
+                  "bigram": "黄昏",
+                  "poems": 9,
+                  "opposite_poems": 1,
+                  "per_1000_han": 2.190313944998783,
+                  "opposite_per_1000_han": 0.18758206715438003
+                },
+                {
+                  "bigram": "相思",
+                  "poems": 6,
+                  "opposite_poems": 1,
+                  "per_1000_han": 1.4602092966658555,
+                  "opposite_per_1000_han": 0.18758206715438003
+                },
+                {
+                  "bigram": "落花",
+                  "poems": 5,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.2168410805548795,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            }
+          ],
+          "poem_ids": [
+            "guwendao-9da2f1321a19",
+            "guwendao-d7ad474edd32",
+            "guwendao-f2b8742f7651",
+            "guwendao-4d795944b856",
+            "guwendao-ada3d515bcde",
+            "guwendao-ed6574697873",
+            "guwendao-b827b3f18b38",
+            "guwendao-8658b61e105e",
+            "guwendao-eda29e11ff49",
+            "guwendao-315cf2d8892b",
+            "guwendao-b1092a25a924",
+            "guwendao-1af881281b3a",
+            "guwendao-646317f664b5",
+            "guwendao-6f7315a764b5",
+            "guwendao-7a26145edb34",
+            "guwendao-7d80baaa45ee",
+            "guwendao-a56b61dd5bc3",
+            "guwendao-cf1f67cae9d7",
+            "guwendao-3543a034333b",
+            "guwendao-8608930dd293",
+            "guwendao-b568dc26cdc9",
+            "guwendao-382552f8064a",
+            "guwendao-b0c9e9593664",
+            "guwendao-a5d0d1487395",
+            "guwendao-7f30c8f6836d",
+            "guwendao-3f09584ea709",
+            "guwendao-e8c06d3a532d",
+            "guwendao-d06ebeb22bd3",
+            "guwendao-7275a2e7b860",
+            "guwendao-dccceec50326",
+            "guwendao-ee1bd6238d4a",
+            "guwendao-9f74bb64198d",
+            "guwendao-018d19f0c4ab",
+            "guwendao-f2da3d53a0ea",
+            "guwendao-47c89d71e6be",
+            "guwendao-a23968b0af37",
+            "guwendao-ab51212c6450",
+            "guwendao-761be0d91e4f",
+            "guwendao-8cd9a96daaa4",
+            "guwendao-a4179a47a25d",
+            "guwendao-94f38dfae388",
+            "guwendao-7563acbe99e7",
+            "guwendao-d5ac0bd52789",
+            "guwendao-d096804a25ff",
+            "guwendao-96689ee0c664",
+            "guwendao-a9d784e11af8",
+            "guwendao-c7e5bbdc720e",
+            "guwendao-97cbaf7a1964",
+            "guwendao-8cd9d76e888d",
+            "guwendao-f44e79379dd7",
+            "guwendao-c616fab1b377",
+            "guwendao-1df6b3da0224",
+            "guwendao-f82821b9d569",
+            "guwendao-cd236de1e210",
+            "guwendao-324219410b89",
+            "guwendao-c80bbb2932fc",
+            "guwendao-b7f6fef5bb0b",
+            "guwendao-e83cadaaf394",
+            "guwendao-3ffd5d0653a9",
+            "guwendao-633fa0fc3e8e"
+          ]
+        }
+      ]
+    },
+    "umap": {
+      "direction": [
+        0.6836038877347537,
+        -0.7298532213218837
+      ],
+      "displayed_variance_fraction": 0.8085882816657891,
+      "horizons_at_top": true,
+      "regions": [
+        {
+          "words": [
+            "万里",
+            "千古",
+            "白发"
+          ],
+          "evidence": [
+            {
+              "fraction": 0.2,
+              "poems_per_end": 48,
+              "counts": [
+                {
+                  "bigram": "万里",
+                  "poems": 10,
+                  "opposite_poems": 1,
+                  "per_1000_han": 2.6226068712300026,
+                  "opposite_per_1000_han": 0.3359086328518643
+                },
+                {
+                  "bigram": "千古",
+                  "poems": 8,
+                  "opposite_poems": 0,
+                  "per_1000_han": 2.098085496984002,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "白发",
+                  "poems": 3,
+                  "opposite_poems": 0,
+                  "per_1000_han": 0.7867820613690008,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "poems_per_end": 60,
+              "counts": [
+                {
+                  "bigram": "万里",
+                  "poems": 14,
+                  "opposite_poems": 1,
+                  "per_1000_han": 3.149937001259975,
+                  "opposite_per_1000_han": 0.2704164413196322
+                },
+                {
+                  "bigram": "千古",
+                  "poems": 8,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.6799664006719865,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "白发",
+                  "poems": 5,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.0499790004199916,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            },
+            {
+              "fraction": 0.3,
+              "poems_per_end": 72,
+              "counts": [
+                {
+                  "bigram": "万里",
+                  "poems": 15,
+                  "opposite_poems": 1,
+                  "per_1000_han": 2.9973772948669914,
+                  "opposite_per_1000_han": 0.22114108801415303
+                },
+                {
+                  "bigram": "千古",
+                  "poems": 8,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.4986886474334957,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "白发",
+                  "poems": 5,
+                  "opposite_poems": 0,
+                  "per_1000_han": 0.9366804046459348,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            }
+          ],
+          "poem_ids": [
+            "guwendao-9822debcdc64",
+            "guwendao-4d9974195b64",
+            "guwendao-78fb60bae93d",
+            "guwendao-12e69f000057",
+            "guwendao-3cfc9856b57a",
+            "guwendao-19f9f352c186",
+            "guwendao-264d7fe426e8",
+            "guwendao-85b8792a66ac",
+            "guwendao-a73bf3bf9923",
+            "guwendao-9134991f2c16",
+            "guwendao-2964b569c32c",
+            "guwendao-69340a781288",
+            "guwendao-ab0499c30bc1",
+            "guwendao-1bb90f5ec9dd",
+            "guwendao-d9f25ef77ac5",
+            "guwendao-6d1ade3a93ca",
+            "guwendao-61e417151fc8",
+            "guwendao-2b8efffb92df",
+            "guwendao-a3d4996007f0",
+            "guwendao-958ebfc84111",
+            "guwendao-06df643b48ef",
+            "guwendao-b05f700e9f41",
+            "guwendao-0927b657115d",
+            "guwendao-9d979213a02a",
+            "guwendao-f6334100d760",
+            "guwendao-7d79ae325a4a",
+            "guwendao-6e55d24e931e",
+            "guwendao-17a86f6c536a",
+            "guwendao-2ae0021a2446",
+            "guwendao-098e88b62d38",
+            "guwendao-a8062138a414",
+            "guwendao-5fb51378286c",
+            "guwendao-b5b2ba43d533",
+            "guwendao-1c78ac08096e",
+            "guwendao-4a32dd627eee",
+            "guwendao-ddc4b7e8623a",
+            "guwendao-f8bcca83002b",
+            "guwendao-f547ff97e13f",
+            "guwendao-ac19428da949",
+            "guwendao-a52ca0ee5a22",
+            "guwendao-895ca1ad44af",
+            "guwendao-8ec8a1fc7509",
+            "guwendao-070fdb82a3f9",
+            "guwendao-29de61cb2ecf",
+            "guwendao-d7fefbfe77d1",
+            "guwendao-958fe8b793c3",
+            "guwendao-8d8908bdda2b",
+            "guwendao-feeab3a2e80e",
+            "guwendao-76a124fc2fb8",
+            "guwendao-8d26eae2cfdf",
+            "guwendao-ee5a919b993a",
+            "guwendao-9d2a73f5e3bd",
+            "guwendao-1ab28cd1c76f",
+            "guwendao-c42c8997a059",
+            "guwendao-79730f08af17",
+            "guwendao-fcb00c141925",
+            "guwendao-e909d866deb8",
+            "guwendao-e94721389239",
+            "guwendao-632c5beb84eb",
+            "guwendao-e8304ec2d842"
+          ]
+        },
+        {
+          "words": [
+            "黄昏",
+            "相思",
+            "落花"
+          ],
+          "evidence": [
+            {
+              "fraction": 0.2,
+              "poems_per_end": 48,
+              "counts": [
+                {
+                  "bigram": "黄昏",
+                  "poems": 5,
+                  "opposite_poems": 1,
+                  "per_1000_han": 1.6795431642593215,
+                  "opposite_per_1000_han": 0.26226068712300027
+                },
+                {
+                  "bigram": "相思",
+                  "poems": 4,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.3436345314074571,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "落花",
+                  "poems": 3,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.0077258985555928,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "poems_per_end": 60,
+              "counts": [
+                {
+                  "bigram": "黄昏",
+                  "poems": 7,
+                  "opposite_poems": 1,
+                  "per_1000_han": 1.8929150892374256,
+                  "opposite_per_1000_han": 0.20999580008399832
+                },
+                {
+                  "bigram": "相思",
+                  "poems": 4,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.0816657652785289,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "落花",
+                  "poems": 5,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.3520822065981613,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            },
+            {
+              "fraction": 0.3,
+              "poems_per_end": 72,
+              "counts": [
+                {
+                  "bigram": "黄昏",
+                  "poems": 8,
+                  "opposite_poems": 2,
+                  "per_1000_han": 1.7691287041132242,
+                  "opposite_per_1000_han": 0.37467216185837393
+                },
+                {
+                  "bigram": "相思",
+                  "poems": 4,
+                  "opposite_poems": 0,
+                  "per_1000_han": 0.8845643520566121,
+                  "opposite_per_1000_han": 0.0
+                },
+                {
+                  "bigram": "落花",
+                  "poems": 5,
+                  "opposite_poems": 0,
+                  "per_1000_han": 1.105705440070765,
+                  "opposite_per_1000_han": 0.0
+                }
+              ]
+            }
+          ],
+          "poem_ids": [
+            "guwendao-b1092a25a924",
+            "guwendao-dccceec50326",
+            "guwendao-cf1f67cae9d7",
+            "guwendao-e8c06d3a532d",
+            "guwendao-c616fab1b377",
+            "guwendao-9a403068c821",
+            "guwendao-d5ac0bd52789",
+            "guwendao-d06ebeb22bd3",
+            "guwendao-6f7315a764b5",
+            "guwendao-7563acbe99e7",
+            "guwendao-315cf2d8892b",
+            "guwendao-225cb1230cb7",
+            "guwendao-f44e79379dd7",
+            "guwendao-04642f13ebcb",
+            "guwendao-ab51212c6450",
+            "guwendao-d7ad474edd32",
+            "guwendao-f8b9b0d72525",
+            "guwendao-a5d0d1487395",
+            "guwendao-133651c26320",
+            "guwendao-382552f8064a",
+            "guwendao-a23968b0af37",
+            "guwendao-fc2335c98c2b",
+            "guwendao-57753f2021ff",
+            "guwendao-7c84c04fcdf0",
+            "guwendao-6d9cb1e033ff",
+            "guwendao-2e5a54cebbd6",
+            "guwendao-a56b61dd5bc3",
+            "guwendao-8e1e68bfcb30",
+            "guwendao-b827b3f18b38",
+            "guwendao-c7e5bbdc720e",
+            "guwendao-0e59331716ae",
+            "guwendao-f2b8742f7651",
+            "guwendao-7a26145edb34",
+            "guwendao-ed6574697873",
+            "guwendao-c80bbb2932fc",
+            "guwendao-37afbc0eb0b6",
+            "guwendao-3543a034333b",
+            "guwendao-8cd9d76e888d",
+            "guwendao-47c89d71e6be",
+            "guwendao-7f30c8f6836d",
+            "guwendao-a9d784e11af8",
+            "guwendao-b0c9e9593664",
+            "guwendao-8cd9a96daaa4",
+            "guwendao-ada3d515bcde",
+            "guwendao-feb73254c693",
+            "guwendao-5b5e301c1b9b",
+            "guwendao-7d80baaa45ee",
+            "guwendao-6e82b4129347",
+            "guwendao-8658b61e105e",
+            "guwendao-018d19f0c4ab",
+            "guwendao-8608930dd293",
+            "guwendao-94f38dfae388",
+            "guwendao-761be0d91e4f",
+            "guwendao-df09c8f1d7b9",
+            "guwendao-9f74bb64198d",
+            "guwendao-b120ceb5ac7e",
+            "guwendao-7275a2e7b860",
+            "guwendao-b568dc26cdc9",
+            "guwendao-4c8ff17aa622",
+            "guwendao-a4179a47a25d"
+          ]
+        }
+      ]
+    }
+  }
+}

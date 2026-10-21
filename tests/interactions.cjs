@@ -8,8 +8,10 @@ class Element {
 const ids=new Map(),el=id=>{if(!ids.has(id))ids.set(id,new Element());return ids.get(id);};let latest,resets=0;
 const classes=new Set(),storage=new Map(),media={matches:false,addEventListener:(name,fn)=>{media.change=fn;}};const keyEvents={};
 const ctx={window:{matchMedia:()=>media,localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)}},document:{documentElement:{},body:{classList:{remove:k=>classes.delete(k),toggle:(k,force)=>{if(force!==undefined){if(force)classes.add(k);else classes.delete(k);return force;}if(classes.has(k)){classes.delete(k);return false;}classes.add(k);return true;}}},getElementById:el,createElement:()=>new Element(),createDocumentFragment:()=>Object.assign(new Element(),{isFragment:true}),querySelectorAll:()=>[],addEventListener:(name,fn)=>{keyEvents[name]=fn;}},Plotly:{react:(id,traces,layout)=>{latest={traces,layout};},relayout:()=>resets++}};
-vm.createContext(ctx);vm.runInContext('window.POETRY_DATA='+fs.readFileSync(require('node:path').join(__dirname,'../data/atlas.json'),'utf8'),ctx);vm.runInContext(fs.readFileSync(require('node:path').join(__dirname,'../public/app.js'),'utf8'),ctx);
+vm.createContext(ctx);vm.runInContext(fs.readFileSync(require('node:path').join(__dirname,'../public/axis-imagery.js'),'utf8'),ctx);vm.runInContext('window.POETRY_DATA='+fs.readFileSync(require('node:path').join(__dirname,'../data/atlas.json'),'utf8'),ctx);vm.runInContext(fs.readFileSync(require('node:path').join(__dirname,'../public/app.js'),'utf8'),ctx);
 const docs=ctx.window.POETRY_DATA.documents,N=docs.length;
+const markup=fs.readFileSync(require('node:path').join(__dirname,'../public/index.html'),'utf8');
+assert(!markup.includes('temperament-arrow'),'Endpoint landmarks must contain words only');
 assert(docs.every(d=>!/[\/／]/.test(d.poet)),'Each poem must have exactly one canonical author');
 const geometry=()=>JSON.stringify({x:latest.traces[0].x,y:latest.traces[0].y,xaxis:latest.layout.xaxis,yaxis:latest.layout.yaxis,uirevision:latest.layout.uirevision});
 function change(id,value,event='change'){el(id).value=value;el(id).events[event]({target:el(id)});}
@@ -31,6 +33,10 @@ change('query','NO_SUCH_POEM','input');assert.equal(offeredPoets().length,0);
 clear();
 for(const view of ['tsne','umap']){
  clear();change('view',view);const before=geometry();
+ assert.equal(el('plot-stage').attrs['data-view'],view);
+ assert.match(el('imagery-horizons').attrs.title,/万里/);assert.match(el('imagery-longing').attrs.title,/相思/);
+ assert(!latest.layout.shapes,'No fitted line is drawn');
+
  change('poet-search','苏','input');checkFull();assert.equal(geometry(),before);assert.equal(el('poet').children.length,2);assert.equal(el('poet').children[1].value,'苏轼');
  assert.equal(el('pieces').children.length,docs.filter(d=>d.poet==='苏轼').length);
  change('poet','苏轼');change('query','十年生死','input');checkFull();assert.equal(geometry(),before);assert.equal(el('pieces').children.length,1);assert.equal(el('neighbors').children.length,3);

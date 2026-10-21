@@ -77,3 +77,33 @@ Model/chunk caches use `.cache/` and are excluded from Git. Refreshing source
 pages or recomputing vectors/projections is a new data run; preserve the checked-in
 snapshot when reproducing the published results. The ordinary app startup and
 tests do not download or run the embedding model.
+
+
+## Endpoint imagery
+
+`python scripts/prepare_imagery.py` audits the fixed map coordinates and poem text,
+writing `data/axis-imagery.json` and the small public presentation file
+`public/axis-imagery.js`. Each map's first principal direction is oriented toward
+increasing x. The outer quartiles contain 60 poems apiece. Their document counts
+support the same two user-selected triplets in both maps:
+
+| Imagery | t-SNE: its end / opposite | UMAP: its end / opposite |
+| --- | --- | --- |
+| 万里 | 12 / 1 | 14 / 1 |
+| 千古 | 8 / 0 | 8 / 0 |
+| 白发 | 6 / 0 | 5 / 0 |
+| 黄昏 | 9 / 1 | 7 / 1 |
+| 相思 | 6 / 1 | 4 / 0 |
+| 落花 | 5 / 0 | 5 / 0 |
+
+Every contrast keeps the same direction with 20%, 25%, and 30% tails, including
+occurrences per 1,000 Han characters to account for text length. The principal
+direction explains 69.9% of displayed t-SNE variance and 80.9% of displayed UMAP
+variance. This describes the two projected maps; it does not establish how much
+original embedding distance they retain. These are literary summaries of a
+continuous gradient, not discrete cluster assignments or poet-style labels.
+
+The triplets sit in reserved plot margins: expansive, historical imagery at the
+lower left of t-SNE and upper left of UMAP, intimate imagery at the opposite end.
+No line or arrow is rendered. Numerical projection ticks are suppressed to give
+the words space; point coordinates and filters are unchanged.

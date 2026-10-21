@@ -54,6 +54,29 @@ class DatasetTests(unittest.TestCase):
             for n in neighbors:
                 self.assertAlmostEqual(n['cosine'],cosine[i,n['index']],places=7)
 
+    def test_endpoint_imagery_evidence(self):
+        evidence = json.loads((APP/'data/axis-imagery.json').read_text())
+        self.assertEqual(evidence['poems'],len(self.atlas['documents']))
+        expected = [['万里','千古','白发'],['黄昏','相思','落花']]
+        public = json.loads((APP/'public/axis-imagery.js').read_text().split('window.SONG_CI_IMAGERY = ')[1].strip().removesuffix(';'))
+        for view, result in evidence['views'].items():
+            self.assertEqual([r['words'] for r in result['regions']],expected)
+            self.assertGreater(result['direction'][0],0)
+            self.assertEqual(result['horizons_at_top'],view=='umap')
+            by_id = {d['id']:d['text'] for d in self.atlas['documents']}
+            for i, region in enumerate(result['regions']):
+                self.assertEqual(len(region['poem_ids']),60)
+                self.assertEqual(public[view]['ends'][i]['counts'],region['evidence'][1]['counts'])
+                opposite = result['regions'][1-i]['poem_ids']
+                for term in region['evidence'][1]['counts']:
+                    self.assertEqual(term['poems'],sum(term['bigram'] in by_id[id] for id in region['poem_ids']))
+                    self.assertEqual(term['opposite_poems'],sum(term['bigram'] in by_id[id] for id in opposite))
+                for sensitivity in region['evidence']:
+                    for term in sensitivity['counts']:
+                        self.assertEqual(len(term['bigram']),2)
+                        self.assertGreater(term['poems'],term['opposite_poems'])
+                        self.assertGreater(term['per_1000_han'],term['opposite_per_1000_han'])
+
     def test_only_two_fixed_views_and_consistent_provenance(self):
         self.assertEqual(set(self.atlas['coordinates']),{'tsne','umap'})
         for coordinates in self.atlas['coordinates'].values():
