@@ -2,7 +2,7 @@
 
 ![t-SNE view of 苏轼《江城子·密州出猎》, selected by searching 老夫聊发](docs/figures/app-preview.jpg)
 
-A bilingual map of 240 Song Ci poems. Explore fixed t-SNE and UMAP views,
+A bilingual map of 240 Song Ci poems. Explore t-SNE and UMAP views,
 search by poet or poem text, and read a poem alongside its three closest
 companions in the original embedding space.
 
@@ -10,10 +10,6 @@ companions in the original embedding space.
 **[Dataset and method](docs/DATASET.md)** ·
 **[Cluster findings](docs/FINDINGS.md)** ·
 **[Deployment](docs/DEPLOYMENT.md)**
-
-This folder is a self-contained Git repository nested inside the Chinese-poetry
-dataset checkout. Only this app repository is published to GitHub. It does not
-depend on files elsewhere in the parent checkout.
 
 | Folder | Contents |
 | --- | --- |
