@@ -1,0 +1,26 @@
+{
+  "model": "Qwen/Qwen3-Embedding-4B",
+  "revision": "5cf2132abc99cad020ac570b19d031efec650f2b",
+  "input_sha256": "bb07f6da4b7e9049e7fae2bf5e437cb504dd13dd87d139bb61c067ebce133e32",
+  "normalization": "L2",
+  "prompt": "",
+  "dtype": "torch.float16",
+  "device": "mps",
+  "shape": [
+    240,
+    2560
+  ],
+  "max_tokens": 290,
+  "model_max_seq_length": 40960,
+  "truncated_poems": 0,
+  "unique_content_count": 240,
+  "seconds": 23.446732997894287,
+  "corpus_sha256": "dcd3370b431f52e222b5ddd93598fc53fe732c6c7969892b89fc5bea8c28af77",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "torch": "2.14.1",
+  "repeat_inference_cosines": [
+    1.0,
+    0.9999975562095642
+  ],
+  "embeddings_sha256": "e881ee07b467dcf6e84d358668369e4a254e8ef32c2ec8f89604ae5d91e96846"
+}

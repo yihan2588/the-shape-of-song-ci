@@ -1,0 +1,2 @@
+# Preserve upstream renderer bytes; do not lint its embedded shader whitespace.
+public/plotly.min.js -whitespace

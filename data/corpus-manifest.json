@@ -1,0 +1,58 @@
+{
+  "poet_labels": {
+    "苏轼": "豪放派",
+    "辛弃疾": "豪放派",
+    "柳永": "婉约派",
+    "晏殊": "婉约派",
+    "欧阳修": "婉约派",
+    "秦观": "婉约派",
+    "周邦彦": "婉约派",
+    "李清照": "婉约派"
+  },
+  "label_sources": {
+    "豪放派": {
+      "url": "https://ldxt.cbpt.cnki.net/portal/journal/portal/client/paper/fbad746ad2bb8d37a7921c8fc04f2ad4",
+      "citation": "詹海菊，苏轼辛弃疾豪放词风的异同，南都学坛，2003(05)，DOI 10.16700/j.cnki.cn41-1157/c.2003.05.037"
+    },
+    "婉约派": {
+      "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/078699-01.pdf",
+      "citation": "李伟权、李时、关莹，艺术鉴赏（第2版），清华大学出版社，2018，PDF page 37, lists these conventional representatives."
+    }
+  },
+  "label_policy": "Conservative manual author-level conventional associations, not an exhaustive binary taxonomy or poem-level classification. All other authors have null labels. Labels never enter vector inputs or projections.",
+  "name": "宋词三百首 · 古文岛宋代卷",
+  "source_url": "https://www.guwendao.net/gushi/songsan.aspx",
+  "retrieved_at": "2026-10-20",
+  "source_sha256": "e66de289af48db735183369084b82fd368844b12fbc1a9dc97e30cabcbeef39e",
+  "n_documents": 240,
+  "n_poets": 97,
+  "selection": "All linked works in 北宋词/南宋词 chapters; 唐五代词 chapters excluded to preserve Song-only scope. Exact same-author Han-text duplicates merged.",
+  "normalization": "Original verse only. Reviewed prose prefaces and parenthesized editorial variants removed; when multiple complete versions are printed, version one is used. NFKC + whitespace normalization; title, author, notes and labels excluded from embeddings.",
+  "duplicate_pages": [],
+  "excluded_preface_ids": [
+    "098e88b62d38",
+    "1443f4f57a9d",
+    "167bcafbfe95",
+    "16f02efc5087",
+    "1c78ac08096e",
+    "22459da51344",
+    "2fab0ad2ae76",
+    "406b5b4f718a",
+    "632c5beb84eb",
+    "66261a47fc2b",
+    "6b30455fdd3c",
+    "70ff5ccdd2f4",
+    "79730f08af17",
+    "7d4dfc7f3db4",
+    "9063e08f5bfc",
+    "a8062138a414",
+    "a9a16104dd1b",
+    "b5465fbbed6f",
+    "cd33ded081be",
+    "ddc4b7e8623a",
+    "f08f2f570c7d",
+    "fcb00c141925"
+  ],
+  "crawled_song_pages": 240,
+  "edition_note": "Source anthology includes Tang/Five Dynasties material; only its Song chapters are included. A page containing a sequence of poems stays one document."
+}

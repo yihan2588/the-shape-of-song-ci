@@ -1,0 +1,23 @@
+{
+  "poet_labels": {
+    "苏轼": "豪放派",
+    "辛弃疾": "豪放派",
+    "柳永": "婉约派",
+    "晏殊": "婉约派",
+    "欧阳修": "婉约派",
+    "秦观": "婉约派",
+    "周邦彦": "婉约派",
+    "李清照": "婉约派"
+  },
+  "label_sources": {
+    "豪放派": {
+      "url": "https://ldxt.cbpt.cnki.net/portal/journal/portal/client/paper/fbad746ad2bb8d37a7921c8fc04f2ad4",
+      "citation": "詹海菊，苏轼辛弃疾豪放词风的异同，南都学坛，2003(05)，DOI 10.16700/j.cnki.cn41-1157/c.2003.05.037"
+    },
+    "婉约派": {
+      "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/078699-01.pdf",
+      "citation": "李伟权、李时、关莹，艺术鉴赏（第2版），清华大学出版社，2018，PDF page 37, lists these conventional representatives."
+    }
+  },
+  "label_policy": "Conservative manual author-level conventional associations, not an exhaustive binary taxonomy or poem-level classification. All other authors have null labels. Labels never enter vector inputs or projections."
+}

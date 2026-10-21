@@ -1,0 +1,28 @@
+{
+  "poems": 240,
+  "authors": 97,
+  "dimensions": 2560,
+  "exact_neighbor_rankings_verified": 720,
+  "max_cosine_error": 3.4545317417755683e-07,
+  "documents_unchanged": true,
+  "coordinates_unchanged": true,
+  "provenance_unchanged": true,
+  "raw_vectors_in_payload": false,
+  "verified_on": "2026-10-21",
+  "deployment_id": "dpl_A6sZigVfyHN59DWjsSXpkXC778JT",
+  "production_url": "https://song-ci-atlas.vercel.app",
+  "supabase_project": "jjfqaqbhullbscimlnve",
+  "api_unit_tests": 4,
+  "interaction_regression": "passed",
+  "production_browser_checks": [
+    "search poet and poem text",
+    "three nearest poems",
+    "neighbor-card selection",
+    "Chinese language switch retains selection",
+    "UMAP view"
+  ],
+  "anonymous_raw_vector_access": false,
+  "anonymous_write_access": false,
+  "original_sites_project_unchanged": true,
+  "production_single_poem_lookup": "passed"
+}

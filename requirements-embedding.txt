@@ -1,0 +1,4 @@
+-r requirements-data.txt
+torch==2.14.1
+sentence-transformers==5.7.0
+huggingface-hub==0.36.2

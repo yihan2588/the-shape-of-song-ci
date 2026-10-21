@@ -1,0 +1,11 @@
+.env*
+!.env.example
+.vercel/
+node_modules/
+.cache/
+__pycache__/
+.pytest_cache/
+.venv/
+.DS_Store
+data/source/pages/
+seed/

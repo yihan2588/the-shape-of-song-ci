@@ -1,0 +1,14 @@
+.env*
+.git/
+tests/
+scripts/
+database/
+README.md
+verification.json
+node_modules/
+__pycache__/
+data/
+analysis/
+docs/
+requirements-*.txt
+THIRD_PARTY_NOTICES.md
