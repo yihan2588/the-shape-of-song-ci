@@ -9,7 +9,7 @@
   "provenance_unchanged": true,
   "raw_vectors_in_payload": false,
   "verified_on": "2026-10-21",
-  "deployment_id": "dpl_8WF7tTGzQTvDXVosSV5Xuxpi91iw",
+  "deployment_id": "dpl_AtxpmPXYarKuXn5B5RcyLxP7XfGr",
   "production_url": "https://song-ci-atlas.vercel.app",
   "supabase_project": "jjfqaqbhullbscimlnve",
   "api_unit_tests": 4,
@@ -27,13 +27,13 @@
   "anonymous_write_access": false,
   "original_sites_project_unchanged": true,
   "production_single_poem_lookup": "passed",
-  "deployed_source_commit": "8af41586f36d2a874809b331f3830907901a9613",
+  "deployed_source_commit": "f536219d850e46364a5dc808c3df77425e826693",
   "app_name_en": "The shape of Song Ci",
   "app_name_zh": "词之形",
   "github_repository": "https://github.com/yihan2588/the-shape-of-song-ci",
   "repository_visibility": "private",
   "standalone_archive_tests": "passed",
-  "dataset_integrity_tests": 4,
+  "dataset_integrity_tests": 5,
   "corpus_rebuild_identical": true,
   "atlas_rebuild_identical": true,
   "parent_dataset_repository_committed": false,
@@ -65,5 +65,38 @@
     "incompatible_previous_poet_cleared": true,
     "regression": "Every offered poet under each style filter has matching work; text query and no-match cases pass.",
     "live_browser": "Desktop: 2 Haofang poets, Su Shi 16 works, switching to Wanyue clears Su Shi and offers 6 poets / 55 works. Mobile: 老夫聊发 offers only 苏轼 and one poem; tap returns to map."
+  },
+  "endpoint_imagery": {
+    "labels": [
+      [
+        "万里",
+        "千古",
+        "白发"
+      ],
+      [
+        "黄昏",
+        "相思",
+        "落花"
+      ]
+    ],
+    "views": [
+      "tsne",
+      "umap"
+    ],
+    "arrow": false,
+    "fitted_line": false,
+    "regions": "Outer quartiles, 60 poems per end, from each saved 2D map first principal direction.",
+    "evidence": "All six contrasts remain positive for document counts and occurrences per 1000 Han characters at 20%, 25%, and 30% tails.",
+    "browser_checks": [
+      "Desktop and phone: both groups visible at opposite corners in t-SNE and UMAP",
+      "No label/marker overlap and no horizontal overflow at measured desktop 1200x750 and phone 325x703 CSS pixels",
+      "Chinese mobile search, return to map, selected poem and three neighbors",
+      "English and Chinese accessible counts and glosses"
+    ],
+    "screenshots": [
+      "docs/figures/imagery-desktop.jpg",
+      "docs/figures/imagery-mobile.jpg"
+    ],
+    "physical_device_test": false
   }
 }
