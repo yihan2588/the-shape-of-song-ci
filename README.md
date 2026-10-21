@@ -61,3 +61,5 @@ credentials, generated seed SQL, and the parent dataset repository are excluded
 from Git. Dataset and analysis files are also excluded from Vercel uploads.
 
 The poet dropdown is derived from the database poems and narrows with the active style and poem-text filters. It only offers poets with matching work; an incompatible previous poet selection is cleared.
+
+In poet-style color mode, style remains the point fill while filter matches receive a green outline and other points fade. The temperament words share the corresponding terracotta and teal palette. Selected poems and their three nearest neighbors retain their green highlights.

@@ -32,8 +32,10 @@
 .imagery-end{position:absolute;z-index:1;max-width:calc(100% - 28px);white-space:nowrap;line-height:1.4;cursor:help}
 .imagery-words{font:17px/1.4 'Songti SC','Noto Serif CJK SC','STSong',serif;letter-spacing:.08em}
 .imagery-separator{font-size:11px;opacity:.5;margin:0 .8em;vertical-align:middle}
-.imagery-horizons{left:14px;color:#65715b}
-.imagery-longing{right:14px;color:#896d78}
+.imagery-horizons{left:14px}
+.imagery-longing{right:14px}
 [data-view="tsne"] .imagery-horizons,[data-view="umap"] .imagery-longing{bottom:0}
 [data-view="tsne"] .imagery-longing,[data-view="umap"] .imagery-horizons{top:0}
 @media(max-width:640px){.imagery-words{font-size:15px}.imagery-separator{margin:0 .65em}}
+
+.visualization[data-color-mode="style"] .dot.matches{background:transparent;border:1.4px solid #41aa8b}

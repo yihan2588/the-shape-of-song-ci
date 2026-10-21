@@ -120,18 +120,23 @@
       const region=imagery.ends[end];
       const gloss=lang==='en'?(end===0?'Ten thousand miles · Ages past · White hair':'Dusk · Longing · Fallen blossoms'):region.words.join(' · ');
       const evidence=`${gloss}\n${t('imageryCounts')}\n${region.counts.map(c=>`${c.bigram}  ${c.poems} / ${c.opposite_poems}`).join('\n')}`;
+      $(id).style.color=styleColors[end===0?'豪放派':'婉约派'];
       $(id).setAttribute('title',evidence);$(id).setAttribute('aria-label',evidence);
     }
   }
   function renderPlot(){
     renderImagery();
     const rank=new Map(neighbors().map((n,k)=>[n.index,k])),coords=DATA.coordinates[view],styles=$('color').value==='style';
+    $('map-panel').setAttribute('data-color-mode',styles?'style':'neutral');
     const colors=docs.map((d,i)=>i===selected?palette.selected:rank.has(i)?palette.neighbors[rank.get(i)]
-      :filtering?(matches.has(i)?palette.match:palette.background):styles?(styleColors[d.label]||palette.background):palette.background);
+      :styles?(styleColors[d.label]||palette.background):filtering&&matches.has(i)?palette.match:palette.background);
+    // Keep style in the fill; filter emphasis has its own outline and opacity.
+    const opacity=docs.map((_,i)=>styles&&filtering&&!matches.has(i)&&i!==selected&&!rank.has(i) ? 0.4 : 1);
+    const outline=docs.map((_,i)=>styles&&filtering&&matches.has(i)&&i!==selected&&!rank.has(i)?1.4:0);
     const trace={type:'scatter',mode:'markers+text',name:t('map'),x:coords.map(r=>r[0]),y:coords.map(r=>r[1]),customdata:docs.map((_,i)=>i),
       text:docs.map((_,i)=>i===selected?t('selected'):rank.has(i)?String(rank.get(i)+1):''),textposition:'top center',textfont:{color:'#164c40',size:11},
       hovertext:docs.map(d=>`${esc(pieceName(d))} · ${esc(d.poet)}<br>${esc(opening(d))}<br>${esc(labelName(d.label))}`),hovertemplate:'%{hovertext}<extra></extra>',
-      marker:{color:colors,size:docs.map((_,i)=>i===selected?14:rank.has(i)?12:filtering&&matches.has(i)?8:5),opacity:1,symbol:docs.map((_,i)=>i===selected?'diamond':'circle'),line:{width:0}}};
+      marker:{color:colors,size:docs.map((_,i)=>i===selected?14:rank.has(i)?12:filtering&&matches.has(i)?8:5),opacity,symbol:docs.map((_,i)=>i===selected?'diamond':'circle'),line:{width:outline,color:palette.match}}};
     const axis=dimension=>({range:bounds[view][dimension],autorange:false,gridcolor:'#e1e3d9',zeroline:false,showticklabels:false,ticks:'',title:{text:''}});
     Plotly.react('plot',[trace],{paper_bgcolor:'#faf8f2',plot_bgcolor:'#faf8f2',font:{family:'system-ui',color:'#26332f'},margin:{l:14,r:14,t:37,b:34},showlegend:false,uirevision:view,dragmode:'pan',xaxis:axis(0),yaxis:axis(1)},
       {responsive:true,displayModeBar:false,scrollZoom:true});

@@ -37,6 +37,23 @@ for(const view of ['tsne','umap']){
  assert.match(el('imagery-horizons').attrs.title,/万里/);assert.match(el('imagery-longing').attrs.title,/相思/);
  assert(!latest.layout.shapes,'No fitted line is drawn');
 
+ // Style fills survive poet, style, and text filters; highlighting uses a ring.
+ clear();change('color','style');
+ assert.equal(el('imagery-horizons').style.color,'#b76c4e');
+ assert.equal(el('imagery-longing').style.color,'#438e9b');
+ change('poet','苏轼');
+ docs.forEach((d,i)=>assert.equal(latest.traces[0].marker.color[i],d.label==='豪放派'?'#b76c4e':d.label==='婉约派'?'#438e9b':'#b0bcb3'));
+ assert(latest.traces[0].marker.line.width.some(w=>w>0));
+ assert(latest.traces[0].marker.opacity.some(o=>o<1));
+ change('color','neutral');assert(latest.traces[0].marker.color.includes('#41aa8b'));
+ change('color','style');assert(latest.traces[0].marker.color.includes('#b76c4e'));assert.equal(geometry(),before);
+ clear();change('school','婉约派');assert(latest.traces[0].marker.color.includes('#438e9b'));
+ clear();change('query','春','input');
+ const styledColors=JSON.stringify(latest.traces[0].marker.color);
+ change('color','neutral');assert.notEqual(JSON.stringify(latest.traces[0].marker.color),styledColors);
+ change('color','style');assert.equal(JSON.stringify(latest.traces[0].marker.color),styledColors);
+ clear();
+
  change('poet-search','苏','input');checkFull();assert.equal(geometry(),before);assert.equal(el('poet').children.length,2);assert.equal(el('poet').children[1].value,'苏轼');
  assert.equal(el('pieces').children.length,docs.filter(d=>d.poet==='苏轼').length);
  change('poet','苏轼');change('query','十年生死','input');checkFull();assert.equal(geometry(),before);assert.equal(el('pieces').children.length,1);assert.equal(el('neighbors').children.length,3);
