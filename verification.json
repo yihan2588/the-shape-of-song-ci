@@ -9,7 +9,7 @@
   "provenance_unchanged": true,
   "raw_vectors_in_payload": false,
   "verified_on": "2026-10-21",
-  "deployment_id": "dpl_B5hqJNAnU1eMCGRgz2tUkmvNhiSg",
+  "deployment_id": "dpl_CEzqGWXVpwETAKFxbtSd1S8EeAGL",
   "production_url": "https://song-ci-atlas.vercel.app",
   "supabase_project": "jjfqaqbhullbscimlnve",
   "api_unit_tests": 4,
@@ -27,7 +27,7 @@
   "anonymous_write_access": false,
   "original_sites_project_unchanged": true,
   "production_single_poem_lookup": "passed",
-  "deployed_source_commit": "2088998f82e8d0a683f02196e2f44670a3f8e476",
+  "deployed_source_commit": "9469a6aa538216d19edac89826b7faf5b94e03b3",
   "app_name_en": "The shape of Song Ci",
   "app_name_zh": "词之形",
   "github_repository": "https://github.com/yihan2588/the-shape-of-song-ci",
@@ -54,5 +54,8 @@
     "vectors_md5": "38f25b2cf4b4c2ccc3595f42df1733cb",
     "content_md5": "cd2541858b3516c367f818eb9d8decc4",
     "coordinates_md5": "ff4233f897620db8012acf32d403626e"
-  }
+  },
+  "production_author_mobile_update": "Verified live: canonical author options, six 欧阳修 works, category return retains filter and all 240 point transforms, tap-to-read with three neighbors, Chinese 老夫聊发 search.",
+  "mobile_browser_environment": "Responsive in-app browser at 390x844 and 390x500; no physical-device test.",
+  "mobile_screenshot": "docs/figures/mobile-search.jpg"
 }
