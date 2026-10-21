@@ -1,6 +1,6 @@
 # The shape of Song Ci / 词之形
 
-![t-SNE view with endpoint imagery labels, showing 苏轼《江城子·密州出猎》 selected by searching 老夫聊发](docs/figures/app-preview.png)
+![t-SNE view with endpoint imagery labels, showing 苏轼《江城子·密州出猎》 selected by searching 老夫聊发](docs/figures/app-preview-cursor-free-2880.png)
 
 A bilingual map of 240 Song Ci poems. Explore t-SNE and UMAP views,
 search by poet or poem text, and read a poem alongside its three closest
