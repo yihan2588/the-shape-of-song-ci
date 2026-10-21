@@ -9,7 +9,7 @@
   "provenance_unchanged": true,
   "raw_vectors_in_payload": false,
   "verified_on": "2026-10-21",
-  "deployment_id": "dpl_CEzqGWXVpwETAKFxbtSd1S8EeAGL",
+  "deployment_id": "dpl_8WF7tTGzQTvDXVosSV5Xuxpi91iw",
   "production_url": "https://song-ci-atlas.vercel.app",
   "supabase_project": "jjfqaqbhullbscimlnve",
   "api_unit_tests": 4,
@@ -27,7 +27,7 @@
   "anonymous_write_access": false,
   "original_sites_project_unchanged": true,
   "production_single_poem_lookup": "passed",
-  "deployed_source_commit": "9469a6aa538216d19edac89826b7faf5b94e03b3",
+  "deployed_source_commit": "8af41586f36d2a874809b331f3830907901a9613",
   "app_name_en": "The shape of Song Ci",
   "app_name_zh": "词之形",
   "github_repository": "https://github.com/yihan2588/the-shape-of-song-ci",
@@ -57,5 +57,13 @@
   },
   "production_author_mobile_update": "Verified live: canonical author options, six 欧阳修 works, category return retains filter and all 240 point transforms, tap-to-read with three neighbors, Chinese 老夫聊发 search.",
   "mobile_browser_environment": "Responsive in-app browser at 390x844 and 390x500; no physical-device test.",
-  "mobile_screenshot": "docs/figures/mobile-search.jpg"
+  "mobile_screenshot": "docs/figures/mobile-search.jpg",
+  "poet_dropdown_verification": {
+    "database_poets": 96,
+    "all_have_work": true,
+    "active_filters_scope_options": true,
+    "incompatible_previous_poet_cleared": true,
+    "regression": "Every offered poet under each style filter has matching work; text query and no-match cases pass.",
+    "live_browser": "Desktop: 2 Haofang poets, Su Shi 16 works, switching to Wanyue clears Su Shi and offers 6 poets / 55 works. Mobile: 老夫聊发 offers only 苏轼 and one poem; tap returns to map."
+  }
 }
