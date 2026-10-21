@@ -408,9 +408,9 @@
   {
     "era": "宋词",
     "corpus_id": "guwendao-c616fab1b377",
-    "requested_author": "欧阳修/朱淑真",
-    "source_author": "欧阳修/朱淑真",
-    "style_label": null,
+    "requested_author": "欧阳修",
+    "source_author": "欧阳修",
+    "style_label": "婉约派",
     "title_simplified": "生查子·元夕",
     "source_note": "",
     "rhythmic": "生查子",
@@ -422,8 +422,8 @@
   {
     "era": "宋词",
     "corpus_id": "guwendao-b827b3f18b38",
-    "requested_author": "冯延巳/欧阳修",
-    "source_author": "冯延巳/欧阳修",
+    "requested_author": "冯延巳",
+    "source_author": "冯延巳",
     "style_label": null,
     "title_simplified": "蝶恋花·庭院深深深几许",
     "source_note": "",

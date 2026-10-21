@@ -1,6 +1,6 @@
 {
   "poems": 240,
-  "authors": 97,
+  "authors": 96,
   "dimensions": 2560,
   "exact_neighbor_rankings_verified": 720,
   "max_cosine_error": 3.4545317417755683e-07,
@@ -33,8 +33,26 @@
   "github_repository": "https://github.com/yihan2588/the-shape-of-song-ci",
   "repository_visibility": "private",
   "standalone_archive_tests": "passed",
-  "dataset_integrity_tests": 3,
+  "dataset_integrity_tests": 4,
   "corpus_rebuild_identical": true,
   "atlas_rebuild_identical": true,
-  "parent_dataset_repository_committed": false
+  "parent_dataset_repository_committed": false,
+  "author_policy": "First listed source author is canonical throughout the app.",
+  "mobile_browser_checks": [
+    "390x844: poet category, persistent return-to-map action, retained filter and fixed points",
+    "Tap result closes search and shows selected poem with three neighbors",
+    "Chinese text search and matching-count action",
+    "390x500: return action stays visible",
+    "Dialog focus, Escape, and desktop breakpoint cleanup"
+  ],
+  "desktop_browser_checks": [
+    "1280x720: header, filters, visualization, and reader bounds exactly match previous production",
+    "Desktop native result selector remains visible; mobile results hidden",
+    "t-SNE and UMAP interaction regressions pass"
+  ],
+  "author_update_invariants": {
+    "vectors_md5": "38f25b2cf4b4c2ccc3595f42df1733cb",
+    "content_md5": "cd2541858b3516c367f818eb9d8decc4",
+    "coordinates_md5": "ff4233f897620db8012acf32d403626e"
+  }
 }

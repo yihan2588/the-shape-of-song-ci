@@ -11,6 +11,9 @@ def clean(s):
     s=unicodedata.normalize('NFKC',s)
     s=re.sub(r'\([^()]*\)','',s)
     return '\n'.join(line.strip() for line in s.splitlines() if line.strip())
+def canonical_author(attribution):
+    """Use the first listed source author for every application-facing record."""
+    return re.split(r'[/／]',attribution, maxsplit=1)[0].strip()
 def main():
     raw=json.loads((SOURCE/'raw.json').read_text());records=[];duplicates=[];seen={}
     for i,r in enumerate(raw):
@@ -18,18 +21,21 @@ def main():
         if key in PREFACES:preface=blocks[0];blocks=blocks[1:]
         if any('版本一' in b for b in blocks):
             end=next(i for i,b in enumerate(blocks) if '版本一' in b);blocks=blocks[:end+1]
-        text=clean('\n'.join(blocks));identity=(r['author'],''.join(re.findall(r'[\u3400-\u9fff\U00020000-\U0003134f]',text)))
+        author=canonical_author(r['author'])
+        text=clean('\n'.join(blocks));identity=(author,''.join(re.findall(r'[\u3400-\u9fff\U00020000-\U0003134f]',text)))
         if identity in seen:duplicates.append({'url':r['url'],'duplicate_of':seen[identity]});continue
         assert len(identity[1])>15, r['url']
         seen[identity]=r['url']
-        records.append({'era':'宋词','corpus_id':f'guwendao-{key}','requested_author':r['author'],'source_author':r['author'],
-         'style_label':LABELS.get(r['author']),'title_simplified':r['title'],'source_note':preface,
+        records.append({'era':'宋词','corpus_id':f'guwendao-{key}','requested_author':author,'source_author':author,
+         'style_label':LABELS.get(author),'title_simplified':r['title'],'source_note':preface,
          'rhythmic':r['title'].split('·')[0],'text_simplified':text,'source_url':r['url'],'source_index':i,'section':r['section']})
     (ROOT/'corpus.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
     old=LABEL_METADATA
     manifest={k:old[k] for k in ['poet_labels','label_sources','label_policy']}
     manifest.update(name='宋词三百首 · 古文岛宋代卷',source_url='https://www.guwendao.net/gushi/songsan.aspx',retrieved_at='2026-10-20',
       source_sha256=hashlib.sha256((SOURCE/'index.html').read_bytes()).hexdigest(),n_documents=len(records),n_poets=len({r['requested_author'] for r in records}),
+      source_author_credits=len({r['author'] for r in raw}),
+      author_policy='Use only the first listed source author as the canonical author for display, filtering, and author-style labels. Original source attributions remain archived in source/raw.json. This is an application convention, not a resolution of disputed authorship.',
       selection='All linked works in 北宋词/南宋词 chapters; 唐五代词 chapters excluded to preserve Song-only scope. Exact same-author Han-text duplicates merged.',
       normalization='Original verse only. Reviewed prose prefaces and parenthesized editorial variants removed; when multiple complete versions are printed, version one is used. NFKC + whitespace normalization; title, author, notes and labels excluded from embeddings.',
       duplicate_pages=duplicates,excluded_preface_ids=sorted(PREFACES),crawled_song_pages=len(raw),

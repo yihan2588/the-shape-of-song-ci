@@ -1,12 +1,14 @@
 # Dataset and method / 数据与方法
 
-The corpus contains **240 Song-era source articles, credited to 97 authors**,
+The corpus contains **240 Song-era source articles, using 96 canonical authors**,
 from [Guwendao's 宋词三百首](https://www.guwendao.net/gushi/songsan.aspx),
 captured on 20 October 2026. Of the index's 293 links, 53 Tang/Five Dynasties
 articles are excluded. All linked Northern/Southern Song entries are retained;
 there is no poet balancing or popularity sampling. A multi-poem sequence on one
-source page stays one document. Source attributions, including ambiguous author
-credits, are preserved.
+source page stays one document. For an attribution with multiple names, the first listed author is the sole
+author used for display, filters, and author-style labels. The original 97
+source attribution strings remain in the archived extraction; the app has 96
+distinct canonical authors. This convention does not settle disputed authorship.
 
 `data/source/raw.json` preserves the extracted source blocks, titles, authors,
 URLs, and page hashes. `data/source/index.html` preserves the anthology index.
@@ -21,6 +23,9 @@ enters the model: no title, poet, preface, style label, or anthology position.
 The saved matrix is float32, L2-normalized, and has shape **240 × 2,560**.
 No poem was truncated. Input hashes, model settings, source hashes, and the
 embedding SHA-256 are recorded in `data/derived/embedding-manifest.json`.
+Its corpus hash records the original embedding run, before author-only metadata
+normalization. The model inputs, vectors, coordinates, and neighbor rankings
+are unchanged by that normalization.
 
 t-SNE uses 50 unwhitened PCA scores, perplexity 30, 1,500 iterations, PCA
 initialization, and seed 42. UMAP uses all normalized dimensions, cosine

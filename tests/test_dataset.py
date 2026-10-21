@@ -17,7 +17,7 @@ class DatasetTests(unittest.TestCase):
 
     def test_snapshot_and_content_only_alignment(self):
         self.assertEqual(len(self.corpus), 240)
-        self.assertEqual(len({d['poet'] for d in self.atlas['documents']}), 97)
+        self.assertEqual(len({d['poet'] for d in self.atlas['documents']}), 96)
         for record, document in zip(self.corpus, self.atlas['documents']):
             self.assertEqual(record['corpus_id'], document['id'])
             self.assertEqual(record['text_simplified'], document['text'])
@@ -26,6 +26,18 @@ class DatasetTests(unittest.TestCase):
         for record, item in zip(self.corpus, inputs):
             self.assertEqual(set(item), {'doc_id', 'content'})
             self.assertEqual(item['content'], ' '.join(record['text_simplified'].split()))
+
+    def test_first_listed_author_is_canonical(self):
+        raw = json.loads((APP/'data/source/raw.json').read_text())
+        expected = {r['url']: r['author'].replace('／','/').split('/')[0].strip() for r in raw}
+        for record, doc in zip(self.corpus, self.atlas['documents']):
+            self.assertEqual(doc['poet'],expected[doc['url']])
+            self.assertEqual(record['requested_author'],doc['poet'])
+            self.assertEqual(record['source_author'],doc['poet'])
+            self.assertNotIn('/',doc['poet'])
+        self.assertEqual(next(d for d in self.atlas['documents'] if d['id']=='guwendao-b827b3f18b38')['poet'],'冯延巳')
+        self.assertEqual(next(d for d in self.atlas['documents'] if d['id']=='guwendao-c616fab1b377')['poet'],'欧阳修')
+        self.assertEqual(next(d for d in self.atlas['documents'] if d['id']=='guwendao-c616fab1b377')['label'],'婉约派')
 
     def test_vector_integrity_and_exact_neighbors(self):
         self.assertEqual(self.vectors.shape, (240,2560))

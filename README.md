@@ -40,7 +40,13 @@ npm run dev
 
 Open `http://127.0.0.1:3210`. The browser loads poem metadata and exact global
 cosine neighbors through Vercel's `/api/atlas` endpoint backed by Supabase.
-Vectors are not sent to the browser. The checked-in `data/atlas.json` is a
+Vectors are not sent to the browser.
+
+On mobile, the search drawer offers tappable poem results and a persistent
+button to show all filtered matches on the map. Opening it does not focus a
+text field. A selected poem returns directly to the map and reading panel.
+Desktop retains its searchable poet dropdown and poem list. The first listed
+source author is used consistently throughout the app. The checked-in `data/atlas.json` is a
 reference for tests and database imports, not a runtime fallback.
 
 For dataset tools, use Python 3.12+ in a virtual environment:

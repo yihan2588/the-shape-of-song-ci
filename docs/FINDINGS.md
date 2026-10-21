@@ -3,6 +3,9 @@
 The label-blind analysis supports two recurring semantic neighborhoods:
 **seasonal scenes and personal longing**, and **history, ambition, and reflection**.
 These are post-hoc interpretations of content-based groups, not poet-style labels.
+These saved analyses use the original source-attribution snapshot. The app now
+uses the first listed author for ambiguous credits; the poem texts and vectors
+are unchanged. Cross-author statistics below describe that historical run.
 
 HDBSCAN on the saved seed-42 maps (minimum cluster size 10, minimum samples 5)
 assigns 81/38 poems to the two t-SNE groups, leaving 121 unassigned. UMAP assigns

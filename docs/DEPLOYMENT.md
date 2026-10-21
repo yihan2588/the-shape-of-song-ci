@@ -7,7 +7,7 @@ resource IDs and the existing production URL are retained across the rebrand.
 
 - Vercel project: `song-ci-atlas` (`prj_LMWzqUdBn5q73xWuR9EevHb4s3O6`).
 - Supabase project: `Song Ci Semantic Explorer` (`jjfqaqbhullbscimlnve`), US East.
-- Dataset: 240 Song-era anthology entries, 97 credited authors, from Guwendao.
+- Dataset: 240 Song-era anthology entries, 96 canonical authors, from Guwendao.
 - Embeddings: existing content-only Qwen3-Embedding-4B vectors, 2,560 dimensions,
   float32 and L2-normalized. No embedding-model service or API is required.
 

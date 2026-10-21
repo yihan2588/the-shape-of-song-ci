@@ -3,3 +3,25 @@
 .neighbor-title strong{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.score{flex-shrink:0}.neighbor .meta{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.neighbor .excerpt{-webkit-line-clamp:1}
 
 #app-state{position:fixed;inset:0;z-index:100;background:#faf8f2f5;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;padding:24px;text-align:center;color:#26332f}#app-state[hidden]{display:none}
+
+/* Desktop controls keep their original flex layout. Drawer-only UI stays hidden. */
+.filter-body{display:contents}.filter-backdrop{display:none}
+@media(max-width:950px){
+  body.filters-open{overflow:hidden}
+  .filters-open .filter-backdrop{display:block;position:fixed;inset:0;z-index:55;border:0;border-radius:0;background:#26332f66;cursor:default}
+  .filters-open .filters{top:0;bottom:auto;left:auto;right:0;width:min(420px,100vw);height:100dvh;max-height:100dvh;padding:16px;padding-top:max(16px,env(safe-area-inset-top));padding-bottom:max(16px,env(safe-area-inset-bottom));border-radius:0;z-index:60;gap:14px;box-shadow:-8px 0 30px #26332f26}
+  .filters>.panel-heading{flex-shrink:0;gap:12px}
+  .filters #close-filters{min-height:44px;padding:8px 12px;font-size:13px}
+  .filters #filters-title:focus{outline:none}
+  .filter-body{display:flex;flex-direction:column;gap:12px;overflow-y:auto;overscroll-behavior:contain;min-height:0;flex:1;padding:2px 3px 8px}
+  .filter-body label{font-size:13px}
+  .filter-body input,.filter-body select{min-height:44px;font-size:16px}
+  .filter-body #pieces{display:none}
+  #mobile-pieces{display:flex;flex-direction:column;gap:8px}
+  .piece-result{display:flex;flex-direction:column;gap:3px;white-space:normal;text-align:left;min-height:58px;padding:10px 12px;font-size:14px;line-height:1.5;flex-shrink:0;background:var(--paper)}
+  .piece-result strong{font-weight:500}.piece-result .meta{font-size:12px}
+  .piece-result[aria-current="true"]{border-color:var(--selected);background:#3486750d}
+  .filters .results-head{flex-shrink:0;font-size:12px}.filters #clear{min-height:36px;min-width:48px}
+  .filter-footer{display:flex;flex-direction:column;gap:8px;flex-shrink:0;border-top:1px solid var(--line);padding-top:12px;background:var(--paper)}
+  #show-map{min-height:48px;width:100%;background:var(--selected);color:white;border-color:var(--selected);font-size:15px;font-weight:600}
+}

@@ -291,8 +291,8 @@
   },
   {
     "corpus_id": "guwendao-c616fab1b377",
-    "requested_author": "欧阳修/朱淑真",
-    "style_label": null,
+    "requested_author": "欧阳修",
+    "style_label": "婉约派",
     "title_simplified": "生查子·元夕",
     "rhythmic": "生查子",
     "content": "去年元夜时,花市灯如昼。 月上柳梢头,人约黄昏后。 今年元夜时,月与灯依旧。 不见去年人,泪湿春衫袖。",
@@ -301,7 +301,7 @@
   },
   {
     "corpus_id": "guwendao-b827b3f18b38",
-    "requested_author": "冯延巳/欧阳修",
+    "requested_author": "冯延巳",
     "style_label": null,
     "title_simplified": "蝶恋花·庭院深深深几许",
     "rhythmic": "蝶恋花",

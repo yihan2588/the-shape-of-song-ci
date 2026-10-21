@@ -10,6 +10,16 @@ RUN=ROOT/'data'
 
 def main():
     source=json.loads((RUN/'corpus.json').read_text())
+    # Keep the saved per-document metadata aligned without re-running the model.
+    metadata_path=RUN/'derived/documents.json'
+    if metadata_path.exists():
+        metadata=json.loads(metadata_path.read_text())
+        records={r['corpus_id']:r for r in source}
+        for row in metadata:
+            record=records[row['corpus_id']]
+            row['requested_author']=record['requested_author']
+            row['style_label']=record['style_label']
+        metadata_path.write_text(json.dumps(metadata,ensure_ascii=False,indent=2))
     documents=[{'id':r['corpus_id'],'poet':r['requested_author'],'label':r['style_label'],
       'title':r['title_simplified'],'note':r.get('source_note',''),'tune':r['rhythmic'],'text':r['text_simplified'],'url':r['source_url']} for r in source]
     x=np.load(RUN/'derived/embeddings.npy').astype(np.float64)
