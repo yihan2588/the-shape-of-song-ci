@@ -9,7 +9,7 @@
   "provenance_unchanged": true,
   "raw_vectors_in_payload": false,
   "verified_on": "2026-10-21",
-  "deployment_id": "dpl_AtxpmPXYarKuXn5B5RcyLxP7XfGr",
+  "deployment_id": "dpl_EXxqbqmev1p4oik6dMm4mxEvB4Tx",
   "production_url": "https://song-ci-atlas.vercel.app",
   "supabase_project": "jjfqaqbhullbscimlnve",
   "api_unit_tests": 4,
@@ -27,7 +27,7 @@
   "anonymous_write_access": false,
   "original_sites_project_unchanged": true,
   "production_single_poem_lookup": "passed",
-  "deployed_source_commit": "f536219d850e46364a5dc808c3df77425e826693",
+  "deployed_source_commit": "e06b05f203d7058fcec5bcca9b1a0bbe93852704",
   "app_name_en": "The shape of Song Ci",
   "app_name_zh": "词之形",
   "github_repository": "https://github.com/yihan2588/the-shape-of-song-ci",
@@ -98,5 +98,26 @@
       "docs/figures/imagery-mobile.jpg"
     ],
     "physical_device_test": false
+  },
+  "style_color_fix": {
+    "cause": "Active filters previously overrode the color-mode selection.",
+    "behavior": "Style mode preserves poet-style fills, highlights filter matches with green outlines, and dims other points to 40 percent opacity. Selected poem and global three neighbors retain green highlights. Neutral mode preserves its green match fills.",
+    "temperament_palette": {
+      "万里、千古、白发": "#b76c4e",
+      "黄昏、相思、落花": "#438e9b"
+    },
+    "browser_checks": [
+      "Live desktop and responsive mobile: switching neutral/style during an active text filter changes fills in both t-SNE and UMAP",
+      "Desktop point transforms unchanged by mode switching in both views",
+      "Mobile search returns to map; both temperament labels match palette exactly; no horizontal overflow",
+      "Selected 江城子·密州出猎 and all three neighbors render correctly"
+    ],
+    "regression_tests": "passed: poet, style and text filters, neutral/style toggles, fixed geometry, imagery palette, selected and nearest colors",
+    "physical_device_test": false,
+    "screenshots": [
+      "docs/figures/style-colors-desktop.jpg",
+      "docs/figures/style-colors-mobile.jpg"
+    ],
+    "readme_hero_refreshed": true
   }
 }
