@@ -16,6 +16,19 @@ function change(id,value,event='change'){el(id).value=value;el(id).events[event]
 const clear=()=>el('clear').events.click();
 const checkFull=()=>{assert.equal(latest.traces.length,1);assert.equal(latest.traces[0].type,'scatter');assert.equal(latest.traces[0].customdata.length,N);assert(!latest.layout.scene);};
 assert.deepEqual(Object.keys(ctx.window.POETRY_DATA.coordinates).sort(),['tsne','umap']);
+// Every offered poet must have database work matching the other active filters.
+const offeredPoets=()=>el('poet').children.slice(1).map(o=>o.value);
+assert.deepEqual(offeredPoets().sort(),[...new Set(docs.map(d=>d.poet))].sort());
+for(const label of ['豪放派','婉约派','__unlabeled']){
+ clear();change('school',label);
+ const expected=[...new Set(docs.filter(d=>label==='__unlabeled'?!d.label:d.label===label).map(d=>d.poet))].sort();
+ assert.deepEqual(offeredPoets().sort(),expected);
+ for(const poet of offeredPoets()){change('poet',poet);assert(el('pieces').children.length>0,`${poet} must have matching poems`);}
+}
+clear();change('poet','李清照');change('school','豪放派');assert.equal(el('poet').value,'');assert(el('pieces').children.length>0);
+clear();change('query','老夫聊发','input');assert.deepEqual(offeredPoets(),['苏轼']);
+change('query','NO_SUCH_POEM','input');assert.equal(offeredPoets().length,0);
+clear();
 for(const view of ['tsne','umap']){
  clear();change('view',view);const before=geometry();
  change('poet-search','苏','input');checkFull();assert.equal(geometry(),before);assert.equal(el('poet').children.length,2);assert.equal(el('poet').children[1].value,'苏轼');

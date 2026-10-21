@@ -38,9 +38,12 @@
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   // Fit nothing in the browser. Bounds and membership always use the entire corpus.
   const bounds=Object.fromEntries(['tsne','umap'].map(key=>[key,[0,1].map(axis=>{const values=DATA.coordinates[key].map(r=>r[axis]);const lo=Math.min(...values),hi=Math.max(...values),pad=(hi-lo||1)*.07;return [lo-pad,hi+pad];})]));
+  const matchesContent=(i,label,q)=>(!label||(label==='__unlabeled'?!docs[i].label:docs[i].label===label))&&(!q||searchable[i].includes(q));
   function rebuildPoets() {
-    const value=$('poet').value,q=normalize($('poet-search').value);
-    const available=poets.filter(p=>normalize(p).includes(q));
+    const value=$('poet').value,q=normalize($('poet-search').value),label=$('school').value,text=normalize($('query').value);
+    // Offer only database authors with work matching the other active filters.
+    const represented=new Set(docs.filter((_,i)=>matchesContent(i,label,text)).map(d=>d.poet));
+    const available=poets.filter(p=>represented.has(p)&&normalize(p).includes(q));
     $('poet').replaceChildren(option('',t(q?'matchedPoets':'allPoets')),...available.map(p=>option(p,p)));
     $('poet').value=available.includes(value)?value:'';
   }
@@ -62,10 +65,11 @@
     $('show-map').textContent=t('showMatches')(matching.length);renderMobileResults();
   }
   function applyFilters(event) {
+    rebuildPoets();
     const poet=$('poet').value,poetQuery=normalize($('poet-search').value),label=$('school').value,q=normalize($('query').value);
     filtering=Boolean(poet||poetQuery||label||q);
     matching=docs.map((_,i)=>i).filter(i=>(!poet||docs[i].poet===poet)&&(!poetQuery||normalize(docs[i].poet).includes(poetQuery))
-      &&(!label||(label==='__unlabeled'?!docs[i].label:docs[i].label===label))&&(!q||searchable[i].includes(q)));
+      &&matchesContent(i,label,q));
     matches=new Set(matching);
     if(selected!==null&&!matches.has(selected))selected=null;
     if(q&&event?.target===$('query'))selected=matching[0]??null;
@@ -131,12 +135,12 @@
     $('color').replaceChildren(option('style',t('style')),option('neutral',t('neutral')));$('color').value=color||'style';
     renderResults();renderReading();renderPlot();
   }
-  $('poet-search').addEventListener('input',e=>{rebuildPoets();applyFilters(e);});
+  $('poet-search').addEventListener('input',applyFilters);
   $('poet').addEventListener('change',applyFilters);$('school').addEventListener('change',applyFilters);$('query').addEventListener('input',applyFilters);
   $('color').addEventListener('change',renderPlot);$('language').addEventListener('change',()=>setLanguage($('language').value));
   $('view').addEventListener('change',()=>{view=$('view').value;renderPlot();});
   $('pieces').addEventListener('change',()=>{if($('pieces').value!=='')selectPiece(Number($('pieces').value));});
-  $('clear').addEventListener('click',()=>{$('poet-search').value='';$('poet').value='';$('school').value='';$('query').value='';rebuildPoets();applyFilters();});
+  $('clear').addEventListener('click',()=>{$('poet-search').value='';$('poet').value='';$('school').value='';$('query').value='';applyFilters();});
   $('clear-selection').addEventListener('click',()=>{selected=null;renderResults();renderReading();renderPlot();});
   $('open-filters').addEventListener('click',()=>setFiltersOpen(!filtersOpen));
   $('close-filters').addEventListener('click',closeFilters);

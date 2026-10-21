@@ -63,3 +63,5 @@ them is optional and requires the local model dependencies described in
 [Dataset and method](docs/DATASET.md). Model weights, environment files,
 credentials, generated seed SQL, and the parent dataset repository are excluded
 from Git. Dataset and analysis files are also excluded from Vercel uploads.
+
+The poet dropdown is derived from the database poems and narrows with the active style and poem-text filters. It only offers poets with matching work; an incompatible previous poet selection is cleared.
