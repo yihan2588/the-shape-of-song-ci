@@ -1,6 +1,6 @@
 # The shape of Song Ci
 
-[English](FINDINGS.md) · [中文](FINDINGS.zh.md) · [English PDF](pdf/the-shape-of-song-ci-en.pdf) · [中文 PDF](pdf/the-shape-of-song-ci-zh.pdf)
+[English](FINDINGS.md) · [中文](FINDINGS.zh.md)
 
 Can semantic maps reveal how Song Ci poems relate through style, imagery and emotion? This analysis combines fixed visualizations, original-vector comparisons and close reading.
 

@@ -8,7 +8,7 @@ companions in the original embedding space.
 
 **[Open the app](https://song-ci-atlas.vercel.app)** ·
 **[Dataset and method](docs/DATASET.md)** ·
-**[Findings: English](docs/FINDINGS.md)** · **[中文分析](docs/FINDINGS.zh.md)** ·
+**[Findings](docs/FINDINGS.md)** ·
 **[Deployment](docs/DEPLOYMENT.md)**
 
 | Folder | Contents |
@@ -71,8 +71,7 @@ panels for both t-SNE and UMAP, then reads five candidate thematic regions again
 original-vector similarities and poem excerpts. It finds school tendencies rather
 than a clean split; the broad life-reflection window has weaker cross-author support.
 
-[Read in English](docs/FINDINGS.md) · [阅读中文版](docs/FINDINGS.zh.md) ·
-[English PDF](docs/pdf/the-shape-of-song-ci-en.pdf) · [中文 PDF](docs/pdf/the-shape-of-song-ci-zh.pdf)
+[Read the findings](docs/FINDINGS.md)
 
 Reproduction and interpretation limits are in [analysis/README.md](analysis/README.md).
 The app, poem vectors, coordinates and nearest-neighbor behavior are unchanged.

@@ -115,6 +115,6 @@ def footer(c,doc):
 SimpleDocTemplate(str(OUT),pagesize=b.A4,leftMargin=b.M,rightMargin=b.M,topMargin=44,bottomMargin=38,title=tr('The shape of Song Ci'),author='Yihan Wu').build(b.S,onFirstPage=footer,onLaterPages=footer)
 md.extend(['[GitHub](https://github.com/yihan2588/the-shape-of-song-ci) · [Live app](https://song-ci-atlas.vercel.app)','',tr('Reproduce: `python analysis/semantic_findings.py`, then `python analysis/render_findings.py --lang en` and `--lang zh`. Saved coordinates and vectors are reused; the app is unchanged.')])
 mdpath=ROOT/'docs'/('FINDINGS.md' if LANG=='en' else 'FINDINGS.zh.md')
-md.insert(1,'[English](FINDINGS.md) · [中文](FINDINGS.zh.md) · [English PDF](pdf/the-shape-of-song-ci-en.pdf) · [中文 PDF](pdf/the-shape-of-song-ci-zh.pdf)')
+md.insert(1,'[English](FINDINGS.md) · [中文](FINDINGS.zh.md)')
 mdpath.write_text('\n\n'.join(v.strip() for v in md)+'\n')
 print(OUT)

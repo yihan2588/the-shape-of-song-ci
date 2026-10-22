@@ -1,6 +1,6 @@
 # 词之形：流派与主题的语义地图
 
-[English](FINDINGS.md) · [中文](FINDINGS.zh.md) · [English PDF](pdf/the-shape-of-song-ci-en.pdf) · [中文 PDF](pdf/the-shape-of-song-ci-zh.pdf)
+[English](FINDINGS.md) · [中文](FINDINGS.zh.md)
 
 语义地图能否呈现宋词在风格、意象与情感上的联系？本分析结合固定的二维可视化、原始向量比较与文本细读，探索这一问题。
 

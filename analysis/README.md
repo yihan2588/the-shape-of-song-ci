@@ -33,6 +33,7 @@ while preserving names, poem quotations, metrics and uncertainty. `translations.
 is the reviewed translation catalog; both editions use the same data and figures.
 
 The renderer writes the English/Chinese Markdown findings, figures and three-page
-PDFs under `docs/`. No credentials, model calls or network access are needed.
+PDFs under `docs/`. PDFs stay local in the Git-ignored `docs/pdf/` directory;
+only Markdown and figures are published. No credentials, model calls or network access are needed.
 `archive/2026-10-21/` retains the superseded cluster analysis for history; its
 interpretations and original-author snapshot are not the current findings.
