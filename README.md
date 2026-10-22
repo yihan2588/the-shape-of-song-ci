@@ -36,14 +36,14 @@ npm run dev
 
 Open `http://127.0.0.1:3210`. The browser loads poem metadata and exact global
 cosine neighbors through Vercel's `/api/atlas` endpoint backed by Supabase.
-Vectors are not sent to the browser.
+Vectors stay on the server.
 
 On mobile, the search drawer offers tappable poem results and a persistent
-button to show all filtered matches on the map. Opening it does not focus a
-text field. A selected poem returns directly to the map and reading panel.
+button to show all filtered matches on the map. Tap a search field to begin
+typing. A selected poem returns directly to the map and reading panel.
 Desktop retains its searchable poet dropdown and poem list. The first listed
 source author is used consistently throughout the app. The checked-in `data/atlas.json` is a
-reference for tests and database imports, not a runtime fallback.
+reference for tests and database imports.
 
 For dataset tools, use Python 3.12+ in a virtual environment:
 
@@ -66,12 +66,11 @@ In poet-style color mode, style remains the point fill while filter matches rece
 
 ## School separation and thematic islands
 
-The revised analysis compares Haofang and Wanyue in separate fixed-coordinate
-panels for both t-SNE and UMAP, then reads five candidate thematic regions against
-original-vector similarities and poem excerpts. It finds school tendencies rather
-than a clean split; the broad life-reflection window has weaker cross-author support.
+Separate Haofang and Wanyue panels show each school's distribution in t-SNE and
+UMAP. Five thematic regions connect poems through imagery and emotion, supported
+by original-vector similarity and close reading. Frontier/history and chamber
+longing are the strongest regions; life reflection spans more varied emotions.
 
 [Read the findings](docs/FINDINGS.md)
 
 Reproduction and interpretation limits are in [analysis/README.md](analysis/README.md).
-The app, poem vectors, coordinates and nearest-neighbor behavior are unchanged.

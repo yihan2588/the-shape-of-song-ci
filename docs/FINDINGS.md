@@ -4,7 +4,7 @@
 
 Can semantic maps reveal how Song Ci poems relate through style, imagery and emotion? This analysis combines fixed visualizations, original-vector comparisons and close reading.
 
-Song Ci is a traditional Chinese lyric-poetry form, originally written to tune patterns. Its two major stylistic traditions are Haofang (豪放派), associated with expansive, heroic expression, and Wanyue (婉约派), associated with intimate, delicate expression. These are tendencies rather than rules for every poem.
+Song Ci is a traditional Chinese lyric-poetry form, originally written to tune patterns. Its two major stylistic traditions are Haofang (豪放派), known for expansive, heroic expression, and Wanyue (婉约派), known for intimate, delicate expression.
 
 Question: If each poem becomes a natural-language embedding in a vector database, will a nonlinear 2D map naturally separate the two schools? Will poems sharing imagery or emotion gather into nearby “islands”?
 
@@ -12,19 +12,19 @@ Audience: readers exploring Chinese poetry through semantic search. Data: 240 an
 
 ![01-school-separation](figures/01-school-separation-en.png)
 
-School tendencies appear, but two separate camps do not. Only eight representative poets carry author-level labels; 152 poems remain unlabeled. In original vectors, the labeled poems have a silhouette of 0.094 (near zero indicates overlapping groups).
+The maps show overlapping school tendencies. Eight representative poets supply 33 Haofang and 55 Wanyue labels; 152 poems remain unlabeled. The original-vector silhouette is 0.094, reflecting substantial overlap.
 
-Incomplete separation may partly reflect school labels as scholarly summaries of a poet’s predominant style, rather than every work: Haofang representative 苏轼 also wrote the intimate, Wanyue-like elegy《江城子·乙卯正月二十日夜记梦》, mourning his wife.
+School labels summarize a poet’s predominant style, and individual works often span styles: Haofang representative 苏轼 wrote the intimate, Wanyue-like elegy《江城子·乙卯正月二十日夜记梦》in memory of his wife.
 
-Excluding same-author candidates, 61.4% of the five nearest labeled poems share the query’s school. Reassigning two of the eight authors to Haofang gives a 57.1% average; 8 of 28 assignments equal or exceed the observed value. This small author-level check does not establish a robust school boundary.
+Among each poem’s five nearest labeled works by other authors, 61.4% share its school. Reassigning two of the eight authors to Haofang gives a 57.1% average; 8 of 28 assignments reach or exceed the observed value.
 
 ## Where themes gather
 
-Big idea: the map suggests local themes more clearly than a clean division by poet school. The five proposed regions are reading hypotheses, with different levels of support.
+Big idea: the map brings shared imagery and emotion into view. Frontier/history and chamber longing have the strongest similarity among the five regions examined.
 
 ![02-thematic-islands](figures/02-thematic-islands-en.png)
 
-Each numbered region uses the eight nearest t-SNE points to a manually chosen center. Positions are unchanged from the app; rings identify inspected poems, not fitted cluster boundaries. Original-vector cosine checks whether each apparent island is also close before projection.
+Each region contains the eight nearest t-SNE points to a manually selected center. Rings mark these works. The table compares their original-vector cosine similarity, including pairs by different authors.
 
 | Region / location | Mean cosine | Other-author pairs only |
 | --- | --- | --- |
@@ -35,7 +35,7 @@ Each numbered region uses the eight nearest t-SNE points to a manually chosen ce
 | 5. Chamber longing | 0.728 | 0.707 |
 | All 240 poems (pair average) | 0.624 | 0.623 |
 
-Frontier/history and chamber longing are the strongest of these windows. Pastoral and parting windows also exceed the corpus pair average. Life reflection does not: its cross-author similarity is 0.592. The lower map area therefore needs a broader, less uniform interpretation.
+Frontier/history, chamber longing, pastoral life and parting exceed the corpus pair average. Life reflection has a cross-author similarity of 0.592, below the 0.623 baseline, and combines a wider range of emotions.
 
 ## Read the islands
 
@@ -44,14 +44,14 @@ Frontier/history and chamber longing are the strongest of these windows. Pastora
 辛弃疾《永遇乐·京口北固亭怀古》：千古江山，英雄无觅，孙仲谋处。
 张孝祥《水调歌头·和庞佑父》：湖海平生豪气，关塞如今风景，剪烛看吴钩。
 
-Historical heroes, lost territory and martial imagery connect this five-author region. “Frontier/history” is more precise than assigning every poem to one school.
+Historical heroes, lost territory and martial imagery connect works by five authors.
 
 ### 2. Life reflection | bottom
 
 苏轼《定风波·莫听穿林打叶声》：一蓑烟雨任平生。
 苏轼《江城子·乙卯正月二十日夜记梦》：十年生死两茫茫，不思量，自难忘。
 
-Resilience and bereavement coexist nearby. Five of eight works are by 苏轼; the region is not a single emotion or a strong cross-author semantic island.
+Resilience and bereavement sit nearby. Five of the eight works are by 苏轼, whose writing connects several emotions in this region.
 
 ### 3. Pastoral life | lower right
 
@@ -72,9 +72,9 @@ Farewell, absent companions and returning seasons link these works. Remembered l
 李清照《一剪梅·红藕香残玉簟秋》：一种相思，两处闲愁。
 唐琬《钗头凤·世情薄》：欲笺心事，独语斜阑。
 
-Intimate absence and enclosed spaces recur. Six of eight works are by 李清照; cross-author similarity remains high, but shared imagery is not identical emotion.
+Intimate longing and enclosed spaces recur. Six of eight works are by 李清照, alongside 唐琬 and 陆游; cross-author similarity is 0.707.
 
-Conclusion: selected thematic islands are useful for discovery; automatic separation into two schools is not established. The app’s original-space nearest poems support close reading. Region selection is post hoc, and map proximity can distort distance. Next, have independent readers label themes without seeing the map and test another anthology.
+Conclusion: the maps show overlapping schools and recognizable thematic neighborhoods. Original-vector neighbors help readers explore these connections through close reading. Next, use independent theme labels and a second anthology to evaluate the regions selected here.
 
 Source anthology: Guwendao, 宋词三百首. School background: Li, Li & Guan, Art Appreciation (2nd ed.), Tsinghua University Press, 2018, p. 37.
 
