@@ -8,7 +8,7 @@ companions in the original embedding space.
 
 **[Open the app](https://song-ci-atlas.vercel.app)** ·
 **[Dataset and method](docs/DATASET.md)** ·
-**[Cluster findings](docs/FINDINGS.md)** ·
+**[Findings: English](docs/FINDINGS.md)** · **[中文分析](docs/FINDINGS.zh.md)** ·
 **[Deployment](docs/DEPLOYMENT.md)**
 
 | Folder | Contents |
@@ -18,7 +18,7 @@ companions in the original embedding space.
 | `database/` | Applied schema and read-only cosine lookup functions |
 | `data/` | Verified corpus, source extraction, vectors, coordinates, manifests, and reference atlas |
 | `scripts/` | Crawl, corpus preparation, local embedding, projection, import, verification, and development server |
-| `analysis/` | Cluster-analysis scripts and saved results |
+| `analysis/` | School-separation and thematic-island analysis, bilingual rendering, and archived earlier work |
 | `docs/` | Dataset/deployment notes, findings, and English/Chinese figures |
 | `tests/` | API, UI-controller, branding, and dataset integrity checks |
 
@@ -63,3 +63,16 @@ from Git. Dataset and analysis files are also excluded from Vercel uploads.
 The poet dropdown is derived from the database poems and narrows with the active style and poem-text filters. It only offers poets with matching work; an incompatible previous poet selection is cleared.
 
 In poet-style color mode, style remains the point fill while filter matches receive a green outline and other points fade. The temperament words share the corresponding terracotta and teal palette. Selected poems and their three nearest neighbors retain their green highlights.
+
+## School separation and thematic islands
+
+The revised analysis compares Haofang and Wanyue in separate fixed-coordinate
+panels for both t-SNE and UMAP, then reads five candidate thematic regions against
+original-vector similarities and poem excerpts. It finds school tendencies rather
+than a clean split; the broad life-reflection window has weaker cross-author support.
+
+[Read in English](docs/FINDINGS.md) · [阅读中文版](docs/FINDINGS.zh.md) ·
+[English PDF](docs/pdf/the-shape-of-song-ci-en.pdf) · [中文 PDF](docs/pdf/the-shape-of-song-ci-zh.pdf)
+
+Reproduction and interpretation limits are in [analysis/README.md](analysis/README.md).
+The app, poem vectors, coordinates and nearest-neighbor behavior are unchanged.

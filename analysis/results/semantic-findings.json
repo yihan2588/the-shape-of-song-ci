@@ -1,0 +1,569 @@
+{
+  "n": 240,
+  "dimensions": 2560,
+  "counts": {
+    "豪放派": 33,
+    "婉约派": 55,
+    "null": 152
+  },
+  "silhouette": {
+    "Original cosine": 0.09435299960923133,
+    "tsne": 0.2577224411848564,
+    "umap": 0.22143162162146632
+  },
+  "cross_author_knn_same_school": 0.6136363636363636,
+  "author_permutation": {
+    "assignments": 28,
+    "mean": 0.5714285714285714,
+    "at_least_observed": 8,
+    "values": [
+      0.5340909090909091,
+      0.4909090909090909,
+      0.5363636363636364,
+      0.5909090909090909,
+      0.45227272727272727,
+      0.475,
+      0.4659090909090909,
+      0.6659090909090909,
+      0.7295454545454545,
+      0.8068181818181818,
+      0.5636363636363636,
+      0.6181818181818182,
+      0.5636363636363636,
+      0.5818181818181818,
+      0.6727272727272727,
+      0.48409090909090907,
+      0.5295454545454545,
+      0.5386363636363637,
+      0.7272727272727273,
+      0.5613636363636364,
+      0.5477272727272727,
+      0.5522727272727272,
+      0.5977272727272728,
+      0.6295454545454545,
+      0.6113636363636363,
+      0.4318181818181818,
+      0.42727272727272725,
+      0.6136363636363636
+    ]
+  },
+  "pair_baseline": 0.6235209669097523,
+  "cross_author_baseline": 0.6227640395662717,
+  "random8_95_interval": [
+    0.567514882661095,
+    0.6835888274138405
+  ],
+  "regions": [
+    {
+      "name": "Frontier & historical memory",
+      "center": [
+        -10,
+        -5.5
+      ],
+      "indices": [
+        173,
+        172,
+        186,
+        187,
+        166,
+        214,
+        189,
+        115
+      ],
+      "mean_cosine": 0.7099559296217015,
+      "cross_author_cosine": 0.7082387002775593,
+      "authors": 5,
+      "poems": [
+        {
+          "id": "guwendao-958ebfc84111",
+          "poet": "辛弃疾",
+          "label": "豪放派",
+          "title": "菩萨蛮·书江西造口壁",
+          "note": "",
+          "tune": "菩萨蛮",
+          "text": "郁孤台下清江水,中间多少行人泪。西北望长安,可怜无数山。\n青山遮不住,毕竟东流去。江晚正愁余,山深闻鹧鸪。",
+          "url": "https://www.guwendao.net/shiwenv_958ebfc84111.aspx"
+        },
+        {
+          "id": "guwendao-06df643b48ef",
+          "poet": "辛弃疾",
+          "label": "豪放派",
+          "title": "水龙吟·登建康赏心亭",
+          "note": "",
+          "tune": "水龙吟",
+          "text": "楚天千里清秋,水随天去秋无际。遥岑远目,献愁供恨,玉簪螺髻。落日楼头,断鸿声里,江南游子。把吴钩看了,栏杆拍遍,无人会,登临意。\n休说鲈鱼堪脍,尽西风,季鹰归未?求田问舍,怕应羞见,刘郎才气。可惜流年,忧愁风雨,树犹如此!倩何人唤取,红巾翠袖,揾英雄泪!",
+          "url": "https://www.guwendao.net/shiwenv_06df643b48ef.aspx"
+        },
+        {
+          "id": "guwendao-12e69f000057",
+          "poet": "辛弃疾",
+          "label": "豪放派",
+          "title": "永遇乐·京口北固亭怀古",
+          "note": "",
+          "tune": "永遇乐",
+          "text": "千古江山,英雄无觅,孙仲谋处。舞榭歌台,风流总被,雨打风吹去。斜阳草树,寻常巷陌,人道寄奴曾住。想当年,金戈铁马,气吞万里如虎。\n元嘉草草,封狼居胥,赢得仓皇北顾。四十三年,望中犹记,烽火扬州路。可堪回首,佛狸祠下,一片神鸦社鼓。凭谁问:廉颇老矣,尚能饭否?",
+          "url": "https://www.guwendao.net/shiwenv_12e69f000057.aspx"
+        },
+        {
+          "id": "guwendao-3cfc9856b57a",
+          "poet": "辛弃疾",
+          "label": "豪放派",
+          "title": "南乡子·登京口北固亭有怀",
+          "note": "",
+          "tune": "南乡子",
+          "text": "何处望神州?满眼风光北固楼。千古兴亡多少事?悠悠。不尽长江滚滚流。\n年少万兜鍪,坐断东南战未休。天下英雄谁敌手?曹刘。生子当如孙仲谋。",
+          "url": "https://www.guwendao.net/shiwenv_3cfc9856b57a.aspx"
+        },
+        {
+          "id": "guwendao-1bb90f5ec9dd",
+          "poet": "张孝祥",
+          "label": null,
+          "title": "水调歌头·和庞佑父",
+          "note": "",
+          "tune": "水调歌头",
+          "text": "雪洗虏尘静,风约楚云留。何人为写悲壮,吹角古城楼。湖海平生豪气,关塞如今风景,剪烛看吴钩。剩喜燃犀处,骇浪与天浮。\n忆当年,周与谢,富春秋,小乔初嫁,香囊未解,勋业故优游。赤壁矶头落照,肥水桥边衰草,渺渺唤人愁。我欲乘风去,击楫誓中流。",
+          "url": "https://www.guwendao.net/shiwenv_1bb90f5ec9dd.aspx"
+        },
+        {
+          "id": "guwendao-9134991f2c16",
+          "poet": "刘克庄",
+          "label": null,
+          "title": "贺新郎·送陈真州子华",
+          "note": "",
+          "tune": "贺新郎",
+          "text": "北望神州路。试平章、这场公事,怎生分付。记得太行山百万,曾入宗爷驾驭。今把作、握蛇骑虎。君去京东豪杰喜,想投戈、下拜真吾父。谈笑里,定齐鲁。\n两河萧瑟惟狐兔。问当年、祖生去后,有人来否。多少新亭挥泪客,谁梦中原块土。算事业、须由人做。应笑书生心胆怯,向车中、闭置如新妇。空目送,塞鸿去。",
+          "url": "https://www.guwendao.net/shiwenv_9134991f2c16.aspx"
+        },
+        {
+          "id": "guwendao-4d9974195b64",
+          "poet": "陈亮",
+          "label": null,
+          "title": "水调歌头·送章德茂大卿使虏",
+          "note": "",
+          "tune": "水调歌头",
+          "text": "不见南师久,漫说北群空。当场只手,毕竟还我万夫雄。自笑堂堂汉使,得似洋洋河水,依旧只流东?且复穹庐拜,会向藁街逢!\n尧之都,舜之壤,禹之封。于中应有,一个半个耻臣戎!万里腥膻如许,千古英灵安在,磅礴几时通?胡运何须问,赫日自当中!",
+          "url": "https://www.guwendao.net/shiwenv_4d9974195b64.aspx"
+        },
+        {
+          "id": "guwendao-a3d4996007f0",
+          "poet": "朱敦儒",
+          "label": null,
+          "title": "相见欢·金陵城上西楼",
+          "note": "",
+          "tune": "相见欢",
+          "text": "金陵城上西楼,倚清秋。万里夕阳垂地大江流。\n中原乱,簪缨散,几时收?试倩悲风吹泪过扬州。",
+          "url": "https://www.guwendao.net/shiwenv_a3d4996007f0.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Life reflection",
+      "center": [
+        -1,
+        -10
+      ],
+      "indices": [
+        53,
+        54,
+        185,
+        61,
+        58,
+        51,
+        69,
+        94
+      ],
+      "mean_cosine": 0.6212057764436019,
+      "cross_author_cosine": 0.5922956069979417,
+      "authors": 4,
+      "poems": [
+        {
+          "id": "guwendao-334152b6ba49",
+          "poet": "苏轼",
+          "label": "豪放派",
+          "title": "临江仙·夜归临皋",
+          "note": "",
+          "tune": "临江仙",
+          "text": "夜饮东坡醒复醉,归来仿佛三更。家童鼻息已雷鸣。敲门都不应,倚杖听江声。\n长恨此身非我有,何时忘却营营。夜阑风静縠纹平。小舟从此逝,江海寄余生。",
+          "url": "https://www.guwendao.net/shiwenv_334152b6ba49.aspx"
+        },
+        {
+          "id": "guwendao-6b30455fdd3c",
+          "poet": "苏轼",
+          "label": "豪放派",
+          "title": "定风波·莫听穿林打叶声",
+          "note": "三月七日，沙湖道中遇雨，雨具先去，同行皆狼狈，余独不觉。已而遂晴，故作此(词)。",
+          "tune": "定风波",
+          "text": "莫听穿林打叶声,何妨吟啸且徐行。竹杖芒鞋轻胜马,谁怕?一蓑烟雨任平生。\n料峭春风吹酒醒,微冷,山头斜照却相迎。回首向来萧瑟处,归去,也无风雨也无晴。",
+          "url": "https://www.guwendao.net/shiwenv_6b30455fdd3c.aspx"
+        },
+        {
+          "id": "guwendao-9e4872c8ca30",
+          "poet": "辛弃疾",
+          "label": "豪放派",
+          "title": "西江月·遣兴",
+          "note": "",
+          "tune": "西江月",
+          "text": "醉里且贪欢笑,要愁那得工夫。近来始觉古人书,信著全无是处。\n昨夜松边醉倒,问松我醉何如。只疑松动要来扶,以手推松曰“去!”",
+          "url": "https://www.guwendao.net/shiwenv_9e4872c8ca30.aspx"
+        },
+        {
+          "id": "guwendao-a9a16104dd1b",
+          "poet": "苏轼",
+          "label": "豪放派",
+          "title": "浣溪沙·游蕲水清泉寺",
+          "note": "游蕲水清泉寺，寺临兰溪，溪水西流。",
+          "tune": "浣溪沙",
+          "text": "山下兰芽短浸溪,松间沙路净无泥,萧萧暮雨子规啼。\n谁道人生无再少?门前流水尚能西!休将白发唱黄鸡。",
+          "url": "https://www.guwendao.net/shiwenv_a9a16104dd1b.aspx"
+        },
+        {
+          "id": "guwendao-567fcf6ffefb",
+          "poet": "苏轼",
+          "label": "豪放派",
+          "title": "江城子·乙卯正月二十日夜记梦",
+          "note": "",
+          "tune": "江城子",
+          "text": "十年生死两茫茫,不思量,自难忘。千里孤坟,无处话凄凉。纵使相逢应不识,尘满面,鬓如霜。\n夜来幽梦忽还乡,小轩窗,正梳妆。相顾无言,惟有泪千行。料得年年肠断处,明月夜,短松冈。",
+          "url": "https://www.guwendao.net/shiwenv_567fcf6ffefb.aspx"
+        },
+        {
+          "id": "guwendao-4d2028af6aed",
+          "poet": "苏轼",
+          "label": "豪放派",
+          "title": "西江月·中秋和子由",
+          "note": "",
+          "tune": "西江月",
+          "text": "世事一场大梦,人生几度秋凉?夜来风叶已鸣廊。看取眉头鬓上。\n酒贱常愁客少,月明多被云妨。中秋谁与共孤光。把盏凄然北望。",
+          "url": "https://www.guwendao.net/shiwenv_4d2028af6aed.aspx"
+        },
+        {
+          "id": "guwendao-a70d4356fb66",
+          "poet": "黄庭坚",
+          "label": null,
+          "title": "鹧鸪天·座中有眉山隐客史应之和前韵即席答之",
+          "note": "",
+          "tune": "鹧鸪天",
+          "text": "黄菊枝头生晓寒。人生莫放酒杯干。风前横笛斜吹雨,醉里簪花倒著冠。\n身健在,且加餐。舞裙歌板尽清欢。黄花白发相牵挽,付与时人冷眼看。",
+          "url": "https://www.guwendao.net/shiwenv_a70d4356fb66.aspx"
+        },
+        {
+          "id": "guwendao-ee5a919b993a",
+          "poet": "侯蒙",
+          "label": null,
+          "title": "临江仙·未遇行藏谁肯信",
+          "note": "",
+          "tune": "临江仙",
+          "text": "未遇行藏谁肯信,如今方表名踪。无端良匠画形容。当风轻借力,一举入高空。\n才得吹嘘身渐稳,只疑远赴蟾宫。雨馀时候夕阳红。几人平地上,看我碧霄中。",
+          "url": "https://www.guwendao.net/shiwenv_ee5a919b993a.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Pastoral life",
+      "center": [
+        4.5,
+        -7.5
+      ],
+      "indices": [
+        204,
+        118,
+        134,
+        104,
+        62,
+        175,
+        178,
+        81
+      ],
+      "mean_cosine": 0.6508745795201506,
+      "cross_author_cosine": 0.6481985835532432,
+      "authors": 7,
+      "poems": [
+        {
+          "id": "guwendao-f8387e41225e",
+          "poet": "卢炳",
+          "label": null,
+          "title": "减字木兰花·莎衫筠笠",
+          "note": "",
+          "tune": "减字木兰花",
+          "text": "莎衫筠笠。正是村村农务急。绿水千畦,惭愧秧针出得齐。\n风斜雨细。麦欲黄时寒又至。馌妇耕夫,画作今年稔岁图。",
+          "url": "https://www.guwendao.net/shiwenv_f8387e41225e.aspx"
+        },
+        {
+          "id": "guwendao-d0a59659b632",
+          "poet": "王炎",
+          "label": null,
+          "title": "南柯子·山冥云阴重",
+          "note": "",
+          "tune": "南柯子",
+          "text": "山冥云阴重,天寒雨意浓。数枝幽艳湿啼红。莫为惜花惆怅对东风。\n蓑笠朝朝出,沟塍处处通。人间辛苦是三农。要得一犁水足望年丰。",
+          "url": "https://www.guwendao.net/shiwenv_d0a59659b632.aspx"
+        },
+        {
+          "id": "guwendao-82bccb42f25f",
+          "poet": "范成大",
+          "label": null,
+          "title": "蝶恋花·春涨一篙添水面",
+          "note": "",
+          "tune": "蝶恋花",
+          "text": "春涨一篙添水面。芳草鹅儿,绿满微风岸。画舫夷犹湾百转。横塘塔近依前远。\n江国多寒农事晚。村北村南,谷雨才耕遍。秀麦连冈桑叶贱。看看尝面收新茧。",
+          "url": "https://www.guwendao.net/shiwenv_82bccb42f25f.aspx"
+        },
+        {
+          "id": "guwendao-1cef42b81ca4",
+          "poet": "周邦彦",
+          "label": "婉约派",
+          "title": "虞美人·疏篱曲径田家小",
+          "note": "",
+          "tune": "虞美人",
+          "text": "疏篱曲径田家小。云树开清晓。天寒山色有无中。野外一声钟起、送孤蓬。\n添衣策马寻亭堠。愁抱惟宜酒。菰蒲睡鸭占陂塘。纵被行人惊散、又成双。",
+          "url": "https://www.guwendao.net/shiwenv_1cef42b81ca4.aspx"
+        },
+        {
+          "id": "guwendao-20ee2cbac808",
+          "poet": "苏轼",
+          "label": "豪放派",
+          "title": "浣溪沙·簌簌衣巾落枣花",
+          "note": "",
+          "tune": "浣溪沙",
+          "text": "簌簌衣巾落枣花,村南村北响缲车,牛衣古柳卖黄瓜。\n酒困路长惟欲睡,日高人渴漫思茶。敲门试问野人家。",
+          "url": "https://www.guwendao.net/shiwenv_20ee2cbac808.aspx"
+        },
+        {
+          "id": "guwendao-03e80e28a0c2",
+          "poet": "辛弃疾",
+          "label": "豪放派",
+          "title": "清平乐·村居",
+          "note": "",
+          "tune": "清平乐",
+          "text": "茅檐低小,溪上青青草。醉里吴音相媚好,白发谁家翁媪?\n大儿锄豆溪东,中儿正织鸡笼。最喜小儿亡赖,溪头卧剥莲蓬。",
+          "url": "https://www.guwendao.net/shiwenv_03e80e28a0c2.aspx"
+        },
+        {
+          "id": "guwendao-f090d65212f4",
+          "poet": "辛弃疾",
+          "label": "豪放派",
+          "title": "西江月·夜行黄沙道中",
+          "note": "",
+          "tune": "西江月",
+          "text": "明月别枝惊鹊,清风半夜鸣蝉。稻花香里说丰年,听取蛙声一片。\n七八个星天外,两三点雨山前。旧时茅店社林边,路转溪桥忽见。",
+          "url": "https://www.guwendao.net/shiwenv_f090d65212f4.aspx"
+        },
+        {
+          "id": "guwendao-8005cc89b888",
+          "poet": "秦观",
+          "label": "婉约派",
+          "title": "行香子·树绕村庄",
+          "note": "",
+          "tune": "行香子",
+          "text": "树绕村庄,水满陂塘。倚东风,豪兴徜徉。小园几许,收尽春光。有桃花红,李花白,菜花黄。\n远远围墙,隐隐茅堂。飏青旗,流水桥旁。偶然乘兴,步过东冈。正莺儿啼,燕儿舞,蝶儿忙。",
+          "url": "https://www.guwendao.net/shiwenv_8005cc89b888.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Parting & remembrance",
+      "center": [
+        7.5,
+        1.5
+      ],
+      "indices": [
+        33,
+        26,
+        19,
+        18,
+        232,
+        76,
+        20,
+        8
+      ],
+      "mean_cosine": 0.6713990275760829,
+      "cross_author_cosine": 0.6721432130620244,
+      "authors": 6,
+      "poems": [
+        {
+          "id": "guwendao-3f09584ea709",
+          "poet": "欧阳修",
+          "label": "婉约派",
+          "title": "浪淘沙·把酒祝东风",
+          "note": "",
+          "tune": "浪淘沙",
+          "text": "把酒祝东风,且共从容。垂杨紫陌洛城东。总是当时携手处,游遍芳丛。\n聚散苦匆匆,此恨无穷。今年花胜去年红。可惜明年花更好,知与谁同?",
+          "url": "https://www.guwendao.net/shiwenv_3f09584ea709.aspx"
+        },
+        {
+          "id": "guwendao-e8c06d3a532d",
+          "poet": "叶清臣",
+          "label": null,
+          "title": "贺圣朝·留别",
+          "note": "",
+          "tune": "贺圣朝",
+          "text": "满斟绿醑留君住。莫匆匆归去。三分春色二分愁,更一分风雨。\n花开花谢、都来几许。且高歌休诉。不知来岁牡丹时,再相逢何处。",
+          "url": "https://www.guwendao.net/shiwenv_e8c06d3a532d.aspx"
+        },
+        {
+          "id": "guwendao-dccceec50326",
+          "poet": "晏殊",
+          "label": "婉约派",
+          "title": "浣溪沙·一向年光有限身",
+          "note": "",
+          "tune": "浣溪沙",
+          "text": "一向年光有限身,等闲离别易销魂,酒筵歌席莫辞频。\n满目山河空念远,落花风雨更伤春,不如怜取眼前人。",
+          "url": "https://www.guwendao.net/shiwenv_dccceec50326.aspx"
+        },
+        {
+          "id": "guwendao-eda29e11ff49",
+          "poet": "晏殊",
+          "label": "婉约派",
+          "title": "浣溪沙·一曲新词酒一杯",
+          "note": "",
+          "tune": "浣溪沙",
+          "text": "一曲新词酒一杯,去年天气旧亭台。夕阳西下几时回?\n无可奈何花落去,似曾相识燕归来。小园香径独徘徊。",
+          "url": "https://www.guwendao.net/shiwenv_eda29e11ff49.aspx"
+        },
+        {
+          "id": "guwendao-d06ebeb22bd3",
+          "poet": "吴文英",
+          "label": null,
+          "title": "唐多令·惜别",
+          "note": "",
+          "tune": "唐多令",
+          "text": "何处合成愁。离人心上秋。纵芭蕉不雨也飕飕。都道晚凉天气好,有明月、怕登楼。\n年事梦中休。花空烟水流。燕辞归、客尚淹留。垂柳不萦裙带住。漫长是、系行舟。",
+          "url": "https://www.guwendao.net/shiwenv_d06ebeb22bd3.aspx"
+        },
+        {
+          "id": "guwendao-cf1f67cae9d7",
+          "poet": "秦观",
+          "label": "婉约派",
+          "title": "江城子·西城杨柳弄春柔",
+          "note": "",
+          "tune": "江城子",
+          "text": "西城杨柳弄春柔,动离忧,泪难收。犹记多情、曾为系归舟。碧野朱桥当日事,人不见,水空流。\n韶华不为少年留,恨悠悠,几时休?飞絮落花时候、一登楼。便作春江都是泪,流不尽,许多愁。",
+          "url": "https://www.guwendao.net/shiwenv_cf1f67cae9d7.aspx"
+        },
+        {
+          "id": "guwendao-4ad35453c395",
+          "poet": "晏殊",
+          "label": "婉约派",
+          "title": "清平乐·红笺小字",
+          "note": "",
+          "tune": "清平乐",
+          "text": "红笺小字,说尽平生意。鸿雁在云鱼在水,惆怅此情难寄。\n斜阳独倚西楼,遥山恰对帘钩。人面不知何处,绿波依旧东流。",
+          "url": "https://www.guwendao.net/shiwenv_4ad35453c395.aspx"
+        },
+        {
+          "id": "guwendao-4d795944b856",
+          "poet": "柳永",
+          "label": "婉约派",
+          "title": "雨霖铃·寒蝉凄切",
+          "note": "",
+          "tune": "雨霖铃",
+          "text": "寒蝉凄切,对长亭晚,骤雨初歇。都门帐饮无绪,留恋处,兰舟催发。执手相看泪眼,竟无语凝噎。念去去,千里烟波,暮霭沉沉楚天阔。\n多情自古伤离别,更那堪,冷落清秋节!今宵酒醒何处?杨柳岸,晓风残月。此去经年,应是良辰好景虚设。便纵有千种风情,更与何人说?",
+          "url": "https://www.guwendao.net/shiwenv_4d795944b856.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Chamber longing",
+      "center": [
+        9.5,
+        5.5
+      ],
+      "indices": [
+        121,
+        130,
+        133,
+        125,
+        160,
+        129,
+        154,
+        124
+      ],
+      "mean_cosine": 0.7277107705363047,
+      "cross_author_cosine": 0.7066943720226418,
+      "authors": 3,
+      "poems": [
+        {
+          "id": "guwendao-b7f6fef5bb0b",
+          "poet": "李清照",
+          "label": "婉约派",
+          "title": "一剪梅·红藕香残玉簟秋",
+          "note": "",
+          "tune": "一剪梅",
+          "text": "红藕香残玉簟秋。轻解罗裳,独上兰舟。云中谁寄锦书来?雁字回时,月满西楼。\n花自飘零水自流。一种相思,两处闲愁。此情无计可消除,才下眉头,却上心头。",
+          "url": "https://www.guwendao.net/shiwenv_b7f6fef5bb0b.aspx"
+        },
+        {
+          "id": "guwendao-cd236de1e210",
+          "poet": "李清照",
+          "label": "婉约派",
+          "title": "武陵春·春晚",
+          "note": "",
+          "tune": "武陵春",
+          "text": "风住尘香花已尽,日晚倦梳头。物是人非事事休,欲语泪先流。\n闻说双溪春尚好,也拟泛轻舟。只恐双溪舴艋舟,载不动许多愁。",
+          "url": "https://www.guwendao.net/shiwenv_cd236de1e210.aspx"
+        },
+        {
+          "id": "guwendao-f82821b9d569",
+          "poet": "李清照",
+          "label": "婉约派",
+          "title": "声声慢·寻寻觅觅",
+          "note": "",
+          "tune": "声声慢",
+          "text": "寻寻觅觅,冷冷清清,凄凄惨惨戚戚。乍暖还寒时候,最难将息。三杯两盏淡酒,怎敌他、晚来风急!雁过也,正伤心,却是旧时相识。\n满地黄花堆积,憔悴损,如今有谁堪摘?守着窗儿,独自怎生得黑!梧桐更兼细雨,到黄昏、点点滴滴。这次第,怎一个愁字了得!",
+          "url": "https://www.guwendao.net/shiwenv_f82821b9d569.aspx"
+        },
+        {
+          "id": "guwendao-96689ee0c664",
+          "poet": "李清照",
+          "label": "婉约派",
+          "title": "凤凰台上忆吹箫·香冷金猊",
+          "note": "",
+          "tune": "凤凰台上忆吹箫",
+          "text": "香冷金猊,被翻红浪,起来慵自梳头。任宝奁尘满,日上帘钩。生怕离怀别苦,多少事、欲说还休。新来瘦,非干病酒,不是悲秋。\n休休,这回去也,千万遍《阳关》,也则难留。念武陵人远,烟锁秦楼。惟有楼前流水,应念我、终日凝眸。凝眸处,从今又添,一段新愁。",
+          "url": "https://www.guwendao.net/shiwenv_96689ee0c664.aspx"
+        },
+        {
+          "id": "guwendao-f44e79379dd7",
+          "poet": "唐琬",
+          "label": null,
+          "title": "钗头凤·世情薄",
+          "note": "",
+          "tune": "钗头凤",
+          "text": "世情薄,人情恶,雨送黄昏花易落。晓风干,泪痕残。欲笺心事,独语斜阑。难,难,难!\n人成各,今非昨,病魂常似秋千索。角声寒,夜阑珊。怕人寻问,咽泪装欢。瞒,瞒,瞒!",
+          "url": "https://www.guwendao.net/shiwenv_f44e79379dd7.aspx"
+        },
+        {
+          "id": "guwendao-324219410b89",
+          "poet": "李清照",
+          "label": "婉约派",
+          "title": "醉花阴·薄雾浓云愁永昼",
+          "note": "",
+          "tune": "醉花阴",
+          "text": "薄雾浓云愁永昼,瑞脑销金兽。佳节又重阳,玉枕纱厨,半夜凉初透。\n东篱把酒黄昏后,有暗香盈袖。莫道不销魂,帘卷西风,人比黄花瘦。",
+          "url": "https://www.guwendao.net/shiwenv_324219410b89.aspx"
+        },
+        {
+          "id": "guwendao-d5ac0bd52789",
+          "poet": "陆游",
+          "label": null,
+          "title": "钗头凤·红酥手",
+          "note": "",
+          "tune": "钗头凤",
+          "text": "红酥手,黄縢酒,满城春色宫墙柳。东风恶,欢情薄。一怀愁绪,几年离索。错、错、错。\n春如旧,人空瘦,泪痕红浥鲛绡透。桃花落,闲池阁。山盟虽在,锦书难托。莫、莫、莫!",
+          "url": "https://www.guwendao.net/shiwenv_d5ac0bd52789.aspx"
+        },
+        {
+          "id": "guwendao-3ffd5d0653a9",
+          "poet": "李清照",
+          "label": "婉约派",
+          "title": "如梦令·昨夜雨疏风骤",
+          "note": "",
+          "tune": "如梦令",
+          "text": "昨夜雨疏风骤,浓睡不消残酒。试问卷帘人,却道海棠依旧。知否,知否?应是绿肥红瘦。",
+          "url": "https://www.guwendao.net/shiwenv_3ffd5d0653a9.aspx"
+        }
+      ]
+    }
+  ],
+  "source_vector_sha256": "e881ee07b467dcf6e84d358668369e4a254e8ef32c2ec8f89604ae5d91e96846"
+}
